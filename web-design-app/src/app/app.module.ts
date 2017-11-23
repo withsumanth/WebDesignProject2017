@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { IndexPageComponent } from './index-page/index-page.component';
+import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IndexPageComponent,
+    SignInPageComponent
   ],
   imports: [
     BrowserModule
