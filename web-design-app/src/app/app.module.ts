@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { UserService } from '../app/user/user-service';
 
 import { AppComponent } from './app.component';
 import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
@@ -19,8 +22,11 @@ import { IndexComponent } from './index/index.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
