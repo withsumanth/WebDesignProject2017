@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { UserService } from '../app/user/user-service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
@@ -22,7 +23,8 @@ import { IndexComponent } from './index/index.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
