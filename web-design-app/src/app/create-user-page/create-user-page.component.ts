@@ -11,16 +11,22 @@ import {Router} from '@angular/router';
   styleUrls: ['./create-user-page.component.css']
 })
 export class CreateUserPageComponent implements OnInit {
-  user:User;
-  constructor(private userService: UserService,private router: Router) { }
+  user: User;
+  constructor(private userService: UserService, private router: Router) {
+    userService
+      .getUsers()
+      .subscribe(user => {
+        this.user = user;
+      });
+  }
 
   ngOnInit() {
   }
   model = new User();
-  onSignup(){
+  onSignup() {
     this.userService
       .onSignup(this.model)
-      .subscribe(()=> this.goBack());
+      .subscribe(() => this.goBack());
   }
 
   goBack(){

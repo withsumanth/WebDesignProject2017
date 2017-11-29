@@ -12,8 +12,12 @@ export class UserService{
     this.headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
     this.options = new RequestOptions({ headers: this.headers });
   }
-  onSignup(details){
-    return this._http.post("http://localhost/ProjectPhp/insert.php/", details, this.options)
-      .map(()=>'');
+  onSignup(details) {
+    return this._http.post('http://localhost/ProjectPhp/insert.php/', details, this.options)
+      .map(() => '');
+  }
+  getUsers() {
+    return this._http.post('http://localhost/ProjectPhp/select.php/','' , this.options)
+      .map( res => res.json());
   }
 }
