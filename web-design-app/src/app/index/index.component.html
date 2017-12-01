@@ -24,13 +24,19 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
-      <div class="heading">
+      <div *ngIf="! isUserLoggedIn" class="heading">
         <h1> &nbsp; </h1>
         <a class="headingref" href="#">Write a Review</a>
         <a class="headingrefForMob">What's in my City?</a>
         <a [routerLink]="['/loginuser']"><button type="button" class="btn" style="align:right">Login</button></a>
         <a [routerLink]="['/createuser']"><button type="button" class="btn">Sign Up</button></a>
       </div>
+        <div *ngIf="isUserLoggedIn" class="heading">
+          <h1> &nbsp; </h1>
+          <a class="headingref" href="#">Write a Review</a>
+          <a class="headingrefForMob">What's in my City?</a>
+          <a (click)="logoutClicked($event)"><button type="button" class="btn" style="align:right">Logout</button></a>
+        </div>
       <!--Carousel starts here-->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-caption">
@@ -52,19 +58,14 @@
                     <input type="query" class="form-control" id="query" placeholder="Search" size="65" style="height:47px">
                   </div>
                   <div class="form-group">
-                    <div class="dropdown">
-                      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" style="height:45px">Select a city
-                        <span class="caret"></span></button>
-                      <ul class="dropdown-menu">
-                        <li>Boston</li>
-                        <li>New York City</li>
-                        <li>Los Angeles</li>
-                        <li>Las Vegas</li>
-                        <li>Bengaluru/li>
-                        <li>Hyderabad</li>
-                        <li>Mumbai</li>
-                        <li>New Delhi</li>
-                      </ul>
+                    <div class="form-group" >
+                      <div class="dropdown" >
+                        <select style="width: 300px;height:47px ;margin-right:20px">
+                          <option *ngFor="let city of citiesList">
+                            {{city.Name}}
+                          </option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                   <button type="submit" class="btn btn-success"><img src="assets/images/search.png" /> &nbsp; Search</button>

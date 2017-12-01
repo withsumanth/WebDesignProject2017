@@ -3,9 +3,11 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Headers} from '@angular/http';
 import { RequestOptions } from '@angular/http';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
-export class UserService{
+export class UserService {
+  private checkLogout ;
   headers: Headers;
   options: RequestOptions;
   constructor (private _http: Http){
@@ -19,5 +21,13 @@ export class UserService{
   getUsers() {
     return this._http.post('http://localhost/ProjectPhp/select.php/','' , this.options)
       .map( res => res.json());
+  }
+
+  isLoggedIn() {
+    return this.checkLogout;
+  }
+
+  loggedIn(value) {
+    this.checkLogout = value;
   }
 }
