@@ -42,13 +42,15 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
   }
 
   emailValidate() {
-    if($('#email').val().length == 0){
+
+
+    if($('#email').val().toString().length.toString() === '0' ){
       $('#emailError').html('Enter the  Email');
       return false;
     }else {
       let check:boolean = false;
       for ( let i = 0 ; i < Object.keys(this.user).length ; i++) {
-          if($('#email').val() == this.user[i].EMAIL){
+          if($('#email').val() === this.user[i].EMAIL){
             check = true;
             $('#emailError').html('Email already exist');
             return false;
@@ -61,7 +63,7 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
   }
 
     passwordValidate() {
-      if ($('#password').val().length == 0) {
+      if ($('#password').val().toString().length.toString() === '0' ) {
         $('#passwordError').html('Enter the  Password');
         return false;
       }
