@@ -2,7 +2,6 @@
   color:#F00;
 }
 
-#passwordError{
+#passwordError,#loginError{
   color:#F00;
 }
-

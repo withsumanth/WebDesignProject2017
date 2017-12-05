@@ -1,1 +1,3 @@
-
+#passwordError,#signupError,#emailError,#repPassError,#nameError{
+  color:#F00;
+}

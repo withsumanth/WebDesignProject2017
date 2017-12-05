@@ -15,50 +15,59 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
   private valueEntered: number;
   public user: User;
   model = new User();
-  //signInForm: FormGroup;
   constructor(public userservice: UserService, private router: Router , fb: FormBuilder) {
     userservice
       .getUsers()
       .subscribe(user => {
         this.user = user;
       });
-    /*this.signInForm = fb.group({
-        'email' : [ null, Validators.required]
-    });*/
   }
   onLogin() {
-
-    /*this.userservice
+      if($('#email').val().toString().length.toString() === '0' || $('#password').val().toString().length.toString() === '0'){
+           $('#loginError').html('Please enter Email and Password');
+            return false;
+      }
+    let check: boolean = false;
+      for ( let i = 0 ; i < Object.keys(this.user).length ; i++) {
+          if ($('#email').val() === this.user[i].EMAIL && $('#password').val() === this.user[i].PASSWORD){
+            check = true;
+          }
+      }
+      if(!check){
+          $('#loginError').html('Email id/Password is invalid');
+          return false;
+      }else{
+          this.userservice
       .loggedIn(true);
-    this.router.navigate(['/home']);*/
+    this.router.navigate(['/home']);
+      }
   }
   ngOnInit() {
+
   }
 
   ngAfterViewInit() {
     $('#email').focus(function(){
-      $('#errorBox').html('');
+      $('#emailError').html('');
+      $('#loginError').html('');
+    });
+      $('#password').focus(function(){
+      $('#passwordError').html('');
+      $('#loginError').html('');
     });
   }
 
   emailValidate() {
-
-
-    if($('#email').val().toString().length.toString() === '0' ){
+    if ($('#email').val().toString().length.toString() === '0' ) {
       $('#emailError').html('Enter the  Email');
       return false;
-    }else {
-      let check:boolean = false;
-      for ( let i = 0 ; i < Object.keys(this.user).length ; i++) {
-          if($('#email').val() === this.user[i].EMAIL){
-            check = true;
-            $('#emailError').html('Email already exist');
-            return false;
-          }
-      }
-      if(!check){
-        $('#emailError').html('');
-      }
+    }else{
+      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      var valid = regex.test($("#email").val());
+        if(!valid){
+             $('#emailError').html('Email format is wrong');
+            return false;   
+        }
     }
   }
 
