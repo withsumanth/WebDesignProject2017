@@ -15,6 +15,7 @@ export class UserService {
     this.options = new RequestOptions({ headers: this.headers });
   }
   onSignup(details) {
+    this.checkLogout = false;
     return this._http.post('http://localhost/ProjectPhp/insert.php/', details, this.options)
       .map(() => '');
   }

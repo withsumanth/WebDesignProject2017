@@ -62,11 +62,11 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
       $('#emailError').html('Enter the  Email');
       return false;
     }else{
-      var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-      var valid = regex.test($("#email").val());
+      const regex: any = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      let valid: boolean = regex.test($("#email").val());
         if(!valid){
              $('#emailError').html('Email format is wrong');
-            return false;   
+            return false;
         }
     }
   }

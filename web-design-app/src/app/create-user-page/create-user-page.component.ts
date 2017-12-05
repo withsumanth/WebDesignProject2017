@@ -46,7 +46,7 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
 
     model = new User();
     onSignup() {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        const regex: any = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if ($('#email').val().toString().length.toString() === '0' || $('#password').val().toString().length.toString() === '0' || $('#name').val().toString().length.toString() === '0' || $('#remail').val().toString().length.toString() === '0') {
             $('#signupError').html('Please enter all the fields');
             return false;
@@ -67,18 +67,24 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
             $('#emailError').html('Email id already exists');
             return false;
         } else {
-            this.userService
+            var retVal = confirm("Are you sure you want to create an account with us?");
+               if( retVal == true ){
+                  this.userService
                 .onSignup(this.model)
                 .subscribe(() => this.goBack());
+               }
+               else{
+                  return false;
+               }
+            }
         }
-    }
 
     goBack() {
         this.router.navigate(['/home']);
     }
 
     emailValidate() {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      const regex: any = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         if ($('#email').val().toString().length.toString() === '0') {
             $('#emailError').html('Enter the  Email');
             return false;
@@ -119,7 +125,7 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
             return false;
         } else {
             if ($('#password').val().toString() !== $('#remail').val().toString()) {
-                $('#repPassError').html('Password entered does not match');
+                $('#repPassError').html('Oops! Looks like password did not match');
                 return false;
             }
         }
