@@ -37,9 +37,14 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
           $('#loginError').html('Email id/Password is invalid');
           return false;
       }else{
+        var retVal = confirm("Do you want to proceed with login?");
+        if( retVal == true ){
           this.userservice
-      .loggedIn(true);
-    this.router.navigate(['/home']);
+            .loggedIn(true);
+          this.router.navigate(['/home']);
+        }else{
+          return false;
+        }
       }
   }
   ngOnInit() {

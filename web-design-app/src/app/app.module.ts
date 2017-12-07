@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { CreateUserPageComponent } from './create-user-page/create-user-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { IndexComponent } from './index/index.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { IndexComponent } from './index/index.component';
     AppComponent,
     IndexComponent,
     CreateUserPageComponent,
-    SignInPageComponent
+    SignInPageComponent,
+    RestaurantsComponent
   ],
   imports: [
     BrowserModule,

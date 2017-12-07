@@ -1,0 +1,33 @@
+body {
+  position: relative;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px;
+}
+
+.blackBorder {
+  border: 1px solid #000;
+}
+
+#section1 {
+  padding-top: 50px;
+  color: #fff;
+  background-color: #1E88E5;
+}
+
+#table1 {
+  display:inline;
+}
+

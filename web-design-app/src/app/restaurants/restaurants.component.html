@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>What's in my City? | Nagpur Restaurents</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <style>
+
+
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="affix" data-offset-top="197">
+
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">What's in my City?</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <form class="form-inline">
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click) = "onClick()" id="login">Login</button>
+            <button type="submit" class="btn btn-warning" id="signup">Sign-up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="section1" class="container-fluid" >
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <h2>Restaurents in Hyderabad</h2><br><br>
+  </div>
+
+  <div  class=""  >
+
+    <table class="table table-responsive" id="table1" *ngFor="let restaurent of restaurants" >
+      <tbody >
+      <tr >
+        <td >
+
+          <div class="" >
+            <div class="">
+              <img src={{restaurent.Image}} alt = "image1" class="media-object" style="width:60px">
+            </div>
+            <div class="">
+              <h4 >{{restaurent.Cuisine}}</h4>
+              <h2 class="">{{restaurent.Name}}</h2>
+              <p >{{restaurent.Address}}</p>
+              <div class="blackBorder"></div>
+              <br>
+              <br>
+
+              <div class="panel panel-warning">
+                <div class="panel-heading" id="moreInfo" (click) =toBeHidden()>More Information</div>
+                <div id ="toBeHidden" class="panel-body col-lg-6 col-md-6 col-sm-12 col-xs-12"  hidden>
+                  <label >Rating:{{restaurent.Rating}}</label><br>
+                  <label >Opens at:{{restaurent.FromTime}}</label><br>
+
+                </div>
+
+                <div class="panel-body col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                  <label >Contact Number:{{restaurent.Phonenumber}}</label><br>
+                  <label >Closes at:{{restaurent.ToTime}}</label>
+                </div>
+
+                <div class="">
+                  <h3>Some Images:</h3>
+                  <img src={{restaurent.Image}} class="img-responsive" alt="Cinque Terre" width="304" height="236">
+                </div>
+
+                <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                  <h3>Map:</h3>
+                  <iframe [src]="cleanURL(restaurent.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</div>
+
+</body>
+
+</html>

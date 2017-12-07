@@ -4,12 +4,14 @@ import { CreateUserPageComponent } from './create-user-page/create-user-page.com
 import { Routes, RouterModule } from '@angular/router';
 import { IndexComponent } from './index/index.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 
 const routes: Routes = [
   {path: 'home', component: IndexComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'createuser', component: CreateUserPageComponent},
   {path: 'loginuser', component: SignInPageComponent},
+  {path: 'restaurants', component: RestaurantsComponent},
 ];
 
 

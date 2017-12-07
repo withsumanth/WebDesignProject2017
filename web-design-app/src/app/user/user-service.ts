@@ -31,4 +31,11 @@ export class UserService {
   loggedIn(value) {
     this.checkLogout = value;
   }
+
+  selectData(values){
+    if(values === 'BOSTON') {
+      return this._http.post('http://localhost/ProjectPhp/selectRestaurants.php/', {'searchValue': 'RESTAURANT', 'city': values} , this.options)
+        .map( res => res.json());
+    }
+  }
 }

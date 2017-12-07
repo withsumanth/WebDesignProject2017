@@ -55,12 +55,20 @@
               <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <form class="form-inline">
                   <div class="form-group">
-                    <input type="query" class="form-control" id="query" placeholder="Search" size="65" style="height:47px">
+                    <input list="search" class="form-control" id = "searchInput" name="search" placeholder="Search" size="65" style="height:47px">
+                    <datalist id="search" name="search">
+                      <option value="Food">
+                      <option value="Shopping">
+                      <option value="Events">
+                      <option value="Nightlife">
+                      <option value="Places of Interest">
+                      <option value="E-Learning">
+                    </datalist>
                   </div>
                   <div class="form-group">
                     <div class="form-group" >
                       <div class="dropdown" >
-                        <select style="width: 300px;height:47px ;margin-right:20px">
+                        <select id="selectValue" style="width: 300px;height:47px ;margin-right:20px">
                           <option *ngFor="let city of citiesList">
                             {{city.Name}}
                           </option>
@@ -68,7 +76,7 @@
                       </div>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-success"><img src="assets/images/search.png" /> &nbsp; Search</button>
+                  <button type="submit" class="btn btn-success" (click) = "searchValidation()"><img src="assets/images/search.png" /> &nbsp; Search</button> <span id="resultError"></span>
                 </form>
                 <div>
                   <ul class="nav">
