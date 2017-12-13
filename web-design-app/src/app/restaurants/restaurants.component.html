@@ -45,10 +45,10 @@
 <div id="section1" class="container-fluid" >
 
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h2>Restaurents in Hyderabad</h2><br><br>
+    <h2 class = "main_heading">Restaurents in Boston</h2><br><br>
   </div>
 
-  <div  class=""  >
+  <div  class="main_content" >
 
     <table class="table table-responsive" id="table1" *ngFor="let restaurent of restaurants" >
       <tbody >
@@ -57,7 +57,7 @@
 
           <div class="" >
             <div class="">
-              <img src={{restaurent.Image}} alt = "image1" class="media-object" style="width:60px">
+              <img src={{restaurent.Image}} alt = "image1" class="media-object" style="width:600px;height:300px">
             </div>
             <div class="">
               <h4 >{{restaurent.Cuisine}}</h4>
@@ -72,7 +72,8 @@
                 <div id ="toBeHidden" class="panel-body col-lg-6 col-md-6 col-sm-12 col-xs-12"  hidden>
                   <label >Rating:{{restaurent.Rating}}</label><br>
                   <label >Opens at:{{restaurent.FromTime}}</label><br>
-
+                  <h3>Map:</h3>
+                  <iframe [src]="cleanURL(restaurent.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
 
                 <div class="panel-body col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
@@ -82,12 +83,11 @@
 
                 <div class="">
                   <h3>Some Images:</h3>
-                  <img src={{restaurent.Image}} class="img-responsive" alt="Cinque Terre" width="304" height="236">
+                  <!--<img src={{restaurent.Image}} class="img-responsive" alt="Cinque Terre" width="304" height="236">-->
                 </div>
 
                 <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                  <h3>Map:</h3>
-                  <iframe [src]="cleanURL(restaurent.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+
                 </div>
 
 
@@ -104,6 +104,110 @@
     </table>
 
   </div>
+
+</div>
+
+
+<div id="footer" class="container-fluid" >
+
+
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 container-fluid customfooter">
+
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 foursections">
+
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+            <h3>General Information</h3>
+            <!--<a href="">About Us</a> <br> <a href="">Contact Us</a><br> <a href="">Blogs</a><br><a href="">Disclaimer</a>
+            <br> <a class="headingrefForReview" href="#"> Write a Review</a>-->
+
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
+              <p>About Us &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of World">
+              <p>Contact Us &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Home to Hollywood">
+              <p>Blogs &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">
+              <p>Disclaimer &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">
+              <p>Write a Review &nbsp; &nbsp; &nbsp; </p>
+            </a>
+
+          </div>
+
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cities">
+            <h3>Our Presence Across the World</h3>
+
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <h4>USA</h4>
+
+
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
+              <p>Boston &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of World">
+              <p>New York City &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Home to Hollywood">
+              <p>Los Angeles &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">
+              <p>Las Vegas &nbsp; &nbsp; &nbsp; </p>
+            </a>
+
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+            <h4>India</h4>
+
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Tech hub of India">
+              <p>Bengaluru &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="City with a rich heritage">
+              <p>Hyderabad &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of India">
+              <p>Mumbai &nbsp; &nbsp; &nbsp; </p>
+            </a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Orange City of India">
+              <p>Nagpur</p>
+            </a>
+
+
+          </div>
+          </div>
+          <!--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
+
+            <div class="logos">
+              <a href="#"><img src="assets/images/facebook-logo-button.png" /></a> &nbsp; &nbsp;
+              <a href="#"><img src="assets/images/instagram-logo.png" /></a> &nbsp; &nbsp;
+              <a href="#"><img src="assets/images/twitter-logo-button.png" /></a>
+            </div>
+
+          </div>-->
+
+
+
+
+
+
+          <!---->
+        </div>
+
+        <div class="listofcities">
+
+
+
+          <br>
+          <p><i>What's in my city? &copy;</i></p>
+
+        </div>
+      </div>
+
 
 </div>
 

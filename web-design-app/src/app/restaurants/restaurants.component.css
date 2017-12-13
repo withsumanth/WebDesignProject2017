@@ -31,3 +31,18 @@ body {
   display:inline;
 }
 
+.main_content{
+  margin-left:120px;
+}
+
+.main_heading{
+  margin-left:620px;
+}
+
+#footer{
+  background-color: #000;
+}
+
+.cities a{
+  text-decoration: none;
+}
