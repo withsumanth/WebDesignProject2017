@@ -1,0 +1,137 @@
+body {
+  position: relative;
+}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.affix ~ .container-fluid {
+  position: relative;
+  top: 50px;
+}
+
+.blackBorder {
+  border: 1px solid #000;
+  margin-top:20px;
+}
+
+#section1 {
+  padding-top: 50px;
+  color: #fff;
+  background-color: #4abdac;
+}
+
+#table1 {
+  display:inline;
+  margin:4px 4px 4px 4px;
+  border:4px solid #333;
+  float: left;
+  min-height: 40px;
+  width: 48%;
+
+}
+
+.main_content{
+  margin-left:120px;
+  margin-right: 100px;
+}
+
+.main_heading{
+  margin-left:620px;
+  color: #ffffff;
+}
+
+#footer{
+  background-color: #000;
+}
+
+.foursections a{
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .initial_image {
+    width: 175px;
+    float: left;
+    margin-left: -200px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .panel{
+    width:350px;
+    margin-left:-130px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .description{
+    margin-left:-50px;
+  }
+  .blackBorder{
+    margin-left:-150px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .main_heading{
+    margin:auto;
+  }
+
+  .table tbody tr td{
+    border:none;
+  }
+
+  .button_grop{
+    margin-right: 500px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  tr{
+    margin-top:70px;
+  }
+
+}
+
+.borderless td, .borderless th {
+  border: none;
+}
+
+.blackBorder{
+  margin-top:50px;
+}
+
+.panel .panel-warning .panel-body{
+  background-color: #000;
+}
+
+@media only screen and (max-width: 375px){
+  .altBtns{
+    visiblity:visible;
+  }
+}
+
+.altBtns{
+  display: none;
+}
+
+.foursections a {
+  color: #fff;
+}
+
+.foursections h4{
+  color: #fff;
+}
+
+.foursections h3{
+  color: #fff;
+}
