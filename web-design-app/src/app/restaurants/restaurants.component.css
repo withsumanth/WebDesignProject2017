@@ -17,6 +17,10 @@ body {
   top: 50px;
 }
 
+.panel-heading:hover {
+  background-color: #dfdfdf !important;
+}
+
 .blackBorder {
   border: 1px solid #000;
   margin-top:20px;
@@ -25,26 +29,33 @@ body {
 #section1 {
   padding-top: 50px;
   color: #fff;
-  background-color: #1E88E5;
+  background-color: #4abdac;
 }
 
 #table1 {
   display:inline;
+  margin:4px 4px 4px 4px;
+  border:4px solid #333;
+  float: left;
+  min-height: 40px;
+  width: 48%;
 }
 
 .main_content{
   margin-left:120px;
+  margin-right: 120px;
 }
 
 .main_heading{
   margin-left:620px;
+  color: #ffffff;
 }
 
 #footer{
   background-color: #000;
 }
 
-.cities a{
+.foursections a{
   text-decoration: none;
 }
 
@@ -114,4 +125,41 @@ body {
 
 .altBtns{
   display: none;
+}
+
+.modal {
+  /* This way it could be display flex or grid or whatever also. */
+  display: block;
+  /* Probably need media queries here */
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+  position: fixed;
+  z-index: 9000;
+  left: 50%;
+  top: 50%;
+  /* Use this for centering if unknown width/height */
+  transform: translate(-50%, -50%);
+  /* If known, negative margins are probably better (less chance of blurry text). */
+  /* margin: -200px 0 0 -200px; */
+  background: white;
+  box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: absolute;
+  top: 10%;
+}
+
+.foursections a {
+  color: #fff;
+}
+
+.foursections h4{
+  color: #fff;
+}
+
+.foursections h3{
+  color: #fff;
 }

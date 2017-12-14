@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import {Router} from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user/user-service';
 import { Restaurants } from '../searchObjects/restaurants';
+import { ModalModule } from 'ngx-bootstrap';
+import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { RestaurantsModalComponent } from '../restaurants-modal/restaurants-modal.component';
+import { Overlay, overlayConfigFactory } from 'angular2-modal';
 import * as $ from 'jquery';
 
 @Component({
@@ -11,12 +15,15 @@ import * as $ from 'jquery';
   templateUrl: './restaurants.component.html',
   styleUrls: ['./restaurants.component.css']
 })
+
 export class RestaurantsComponent implements OnInit {
   restaurants: Restaurants;
-
-  constructor(private sanitizer: DomSanitizer, private router: Router, private userService: UserService, private route: ActivatedRoute) { }
+  resData:Restaurants;
+  constructor(private sanitizer: DomSanitizer, private router: Router, private userService: UserService, private route: ActivatedRoute, public modalService: NgbModal) { }
 
   cityName: any;
+  closeResult: string;
+  mapName: any[];
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.cityName = params["cityName"];
@@ -32,8 +39,26 @@ export class RestaurantsComponent implements OnInit {
     console.log(this.restaurants);
   }
 
-  cleanURL(oldURL: string)  {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(oldURL);
+  cleanURL(oldURL)  {
+    return (this.sanitizer.bypassSecurityTrustResourceUrl(oldURL));
   }
 
+  modalopen(content,r:Restaurants){
+    this.resData=r;
+    this.modalService.open(content,{
+      size:'lg',
+    });
+  }
+
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
 }
+

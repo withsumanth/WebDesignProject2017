@@ -8,8 +8,9 @@ export class Restaurants {
   FromRange:string;
   ToRange:string;
   Image:string;
-  Map:string;
+  Map:any;
   Cuisine:string;
   ID:string;
   Phonenumber:string;
+  MapString:string;
 }

@@ -11,9 +11,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -32,8 +35,6 @@
           <div class="form-group button_grop">
             <button type="submit" class="btn btn-primary visible-sm visible-xs" (click) = "onClick()" id="login">Login</button>
             <button type="submit" class="btn btn-warning visible-sm visible-xs" id="signup">Sign-up</button>
-
-
           </div>
         </form>
       </div>
@@ -47,8 +48,31 @@
     <h2 class = "main_heading">Restaurents in Boston</h2><br><br>
   </div>
 
-  <div  class="main_content" >
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class = "modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Hi there!</h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
+      <div class="modal-body">
+        <div class="" id="moreInfo">More Information</div>
+        <div id ="toBeHidden" class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+          <label >Rating:{{resData.Rating}}</label><br>
+          <label >Opens at:{{resData.FromTime}}</label><br>
+          <h3>Map:</h3>
+          <iframe [src]="cleanURL(resData.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+      </div>
+      </div>
+    </ng-template>
+
+  <div  class="main_content" >
     <table class="table  borderless" id="table1" *ngFor="let restaurent of restaurants" >
       <tbody >
       <tr class="rw" >
@@ -56,7 +80,7 @@
 
           <div class="" >
             <div class="">
-              <img src={{restaurent.Image}} alt = "image1" class="media-object initial_image" style="width:430px;height:240px">
+              <img src={{restaurent.Image}} alt = "image1" class="media-object initial_image" style="width:500px;height:240px">
             </div>
             <div class="">
               <div class = "description">
@@ -68,31 +92,21 @@
               <br>
               <br>
 
-
-
               <div class="">
-                <div class="" id="moreInfo" (click) =toBeHidden()>More Information</div>
-                <div id ="toBeHidden" class=" col-lg-6 col-md-6 col-sm-12 col-xs-12"  hidden>
-                  <label >Rating:{{restaurent.Rating}}</label><br>
-                  <label >Opens at:{{restaurent.FromTime}}</label><br>
-                  <h3>Map:</h3>
-                  <iframe [src]="cleanURL(restaurent.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
 
-                <div class="panel-body col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+                <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                   <label >Contact Number:{{restaurent.Phonenumber}}</label><br>
                   <label >Closes at:{{restaurent.ToTime}}</label>
                 </div>
 
-                <div class="">
-                  <h3>Some Images:</h3>
-                  <!--<img src={{restaurent.Image}} class="img-responsive" alt="Cinque Terre" width="304" height="236">-->
+                <span style="cursor:pointer">
+                <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 " (click)="modalopen(content,restaurent)">
+                  <div class="panel panel-default" >
+                    <div class="panel-heading">Panel Header</div>
+                  </div>
+
                 </div>
-
-                <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-
-                </div>
-
+                </span>
 
               </div>
 
@@ -206,7 +220,7 @@
 
 
           <br>
-          <p><i>What's in my city? &copy;</i></p>
+          <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i></p>
 
         </div>
       </div>
