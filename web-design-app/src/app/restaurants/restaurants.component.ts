@@ -6,7 +6,6 @@ import { UserService } from '../user/user-service';
 import { Restaurants } from '../searchObjects/restaurants';
 import { ModalModule } from 'ngx-bootstrap';
 import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { RestaurantsModalComponent } from '../restaurants-modal/restaurants-modal.component';
 import { Overlay, overlayConfigFactory } from 'angular2-modal';
 import * as $ from 'jquery';
 
