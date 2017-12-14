@@ -19,6 +19,7 @@ body {
 
 .blackBorder {
   border: 1px solid #000;
+  margin-top:20px;
 }
 
 #section1 {
@@ -45,4 +46,72 @@ body {
 
 .cities a{
   text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .initial_image {
+    width: 175px;
+    float: left;
+    margin-left: -200px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+ .panel{
+   width:350px;
+   margin-left:-130px;
+ }
+}
+
+@media only screen and (max-width: 375px) {
+ .description{
+   margin-left:-50px;
+ }
+  .blackBorder{
+   margin-left:-150px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .main_heading{
+    margin:auto;
+  }
+
+  .table tbody tr td{
+    border:none;
+  }
+
+  .button_grop{
+    margin-right: 500px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  tr{
+    margin-top:70px;
+  }
+
+}
+
+.borderless td, .borderless th {
+  border: none;
+}
+
+.blackBorder{
+  margin-top:50px;
+}
+
+.panel .panel-warning .panel-body{
+  background-color: #000;
+}
+
+@media only screen and (max-width: 375px){
+  .altBtns{
+    visiblity:visible;
+  }
+}
+
+.altBtns{
+  display: none;
 }

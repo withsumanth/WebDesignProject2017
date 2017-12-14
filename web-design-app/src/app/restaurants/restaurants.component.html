@@ -4,7 +4,7 @@
 <head>
   <title>What's in my City? | Nagpur Restaurents</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -14,10 +14,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-  <style>
 
-
-  </style>
 </head>
 
 <body data-spy="scroll" data-target="affix" data-offset-top="197">
@@ -32,9 +29,11 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <form class="form-inline">
 
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary" (click) = "onClick()" id="login">Login</button>
-            <button type="submit" class="btn btn-warning" id="signup">Sign-up</button>
+          <div class="form-group button_grop">
+            <button type="submit" class="btn btn-primary visible-sm visible-xs" (click) = "onClick()" id="login">Login</button>
+            <button type="submit" class="btn btn-warning visible-sm visible-xs" id="signup">Sign-up</button>
+
+
           </div>
         </form>
       </div>
@@ -50,26 +49,30 @@
 
   <div  class="main_content" >
 
-    <table class="table table-responsive" id="table1" *ngFor="let restaurent of restaurants" >
+    <table class="table  borderless" id="table1" *ngFor="let restaurent of restaurants" >
       <tbody >
-      <tr >
+      <tr class="rw" >
         <td >
 
           <div class="" >
             <div class="">
-              <img src={{restaurent.Image}} alt = "image1" class="media-object" style="width:600px;height:300px">
+              <img src={{restaurent.Image}} alt = "image1" class="media-object initial_image" style="width:430px;height:240px">
             </div>
             <div class="">
+              <div class = "description">
               <h4 >{{restaurent.Cuisine}}</h4>
               <h2 class="">{{restaurent.Name}}</h2>
               <p >{{restaurent.Address}}</p>
-              <div class="blackBorder"></div>
+              </div>
+
               <br>
               <br>
 
-              <div class="panel panel-warning">
-                <div class="panel-heading" id="moreInfo" (click) =toBeHidden()>More Information</div>
-                <div id ="toBeHidden" class="panel-body col-lg-6 col-md-6 col-sm-12 col-xs-12"  hidden>
+
+
+              <div class="">
+                <div class="" id="moreInfo" (click) =toBeHidden()>More Information</div>
+                <div id ="toBeHidden" class=" col-lg-6 col-md-6 col-sm-12 col-xs-12"  hidden>
                   <label >Rating:{{restaurent.Rating}}</label><br>
                   <label >Opens at:{{restaurent.FromTime}}</label><br>
                   <h3>Map:</h3>
@@ -96,7 +99,7 @@
 
             </div>
           </div>
-
+          <div class="blackBorder"></div>
         </td>
       </tr>
 
