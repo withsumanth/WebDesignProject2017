@@ -35,7 +35,7 @@ body {
 #table1 {
   display:inline;
   margin:4px 4px 4px 4px;
-  border:4px solid #333;
+  /*border:4px solid #333;*/
   float: left;
   min-height: 40px;
   width: 48%;
@@ -162,4 +162,46 @@ body {
 
 .foursections h3{
   color: #fff;
+}
+
+
+
+@media only screen and (max-width: 375px){
+  .main_body{
+    width:435px;
+  }
+
+  .panel-body{
+    display: none;
+  }
+
+  .contact_info{
+    margin-left: -58px;
+  }
+
+  .main_logo{
+    width:405px;
+  }
+  .nav_bar{
+    height:200px;
+  }
+  .nvbar{
+    height:200px;
+  }
+.nvbar{
+  height:160px;
+}
+
+.navbar-brand{
+  display: none;
+}
+
+.text{
+  display: inline;
+}
+
+}
+
+.text{
+  display: none;
 }

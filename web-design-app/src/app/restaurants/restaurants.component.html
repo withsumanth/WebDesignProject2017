@@ -20,13 +20,15 @@
 
 </head>
 
-<body data-spy="scroll" data-target="affix" data-offset-top="197">
+<body class="main_body">
 
-<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
-  <div class="container-fluid">
+<!--<nav class="navbar navbar-inverse" class="nav_bar">
+  <div class="container-fluid nvbar" style="height: 100px;background-color: #000000">
     <div class="navbar-header">
 
-      <a class="navbar-brand" href="#">What's in my City?</a>
+      <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" class="main_logo" style="height:75px"/></a>
+      <button type="submit" class="btn btn-primary visible-sm visible-xs" (click) = "onClick()" id="login">Login</button>
+      <button type="submit" class="btn btn-warning visible-sm visible-xs" id="signup">Sign-up</button>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -40,7 +42,19 @@
       </div>
     </div>
   </div>
-</nav>
+</nav>-->
+
+
+<div class="container-fluid" style="background-color: #000000;height: 120px;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #000000">
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+      <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" class="main_logo" style="height:75px"/></a>
+    </div>
+    <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+     <p class="text">What's in My City?</p> <button type="submit" class="btn btn-primary btn-lg" (click) = "onClick()" id="logout">Logout</button>
+    </div>
+  </div>
+</div>
 
 <div id="section1" class="container-fluid" >
 
@@ -48,11 +62,11 @@
     <h2 class = "main_heading">Restaurents in Boston</h2><br><br>
   </div>
 
-    <ng-template #content let-c="close" let-d="dismiss">
-      <div class = "modal-content">
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class = "modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Hi there!</h4>
-        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -67,10 +81,10 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
       </div>
-      </div>
-    </ng-template>
+    </div>
+  </ng-template>
 
   <div  class="main_content" >
     <table class="table  borderless" id="table1" *ngFor="let restaurent of restaurants" >
@@ -80,7 +94,7 @@
 
           <div class="" >
             <div class="">
-              <img src={{restaurent.Image}} alt = "image1" class="media-object initial_image" style="width:500px;height:240px">
+              <img src={{restaurent.Image}} alt = "image1" class="media-object initial_image" style="width:470px;height:240px">
             </div>
             <div class="">
               <div class = "description">
@@ -94,7 +108,7 @@
 
               <div class="">
 
-                <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                <div class="contact_info col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                   <label >Contact Number:{{restaurent.Phonenumber}}</label><br>
                   <label >Closes at:{{restaurent.ToTime}}</label>
                 </div>
@@ -102,7 +116,7 @@
                 <span style="cursor:pointer">
                 <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 " (click)="modalopen(content,restaurent)">
                   <div class="panel panel-default" >
-                    <div class="panel-heading">Panel Header</div>
+                    <div class="panel-heading">More Information</div>
                   </div>
 
                 </div>
@@ -132,35 +146,27 @@
 
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 foursections">
 
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
             <h3>General Information</h3>
             <!--<a href="">About Us</a> <br> <a href="">Contact Us</a><br> <a href="">Blogs</a><br><a href="">Disclaimer</a>
             <br> <a class="headingrefForReview" href="#"> Write a Review</a>-->
 
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
-              <p>About Us &nbsp; &nbsp; &nbsp; </p>
-            </a>
+              About Us |</a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of World">
-              <p>Contact Us &nbsp; &nbsp; &nbsp; </p>
-            </a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Home to Hollywood">
-              <p>Blogs &nbsp; &nbsp; &nbsp; </p>
-            </a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">
-              <p>Disclaimer &nbsp; &nbsp; &nbsp; </p>
-            </a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">
-              <p>Write a Review &nbsp; &nbsp; &nbsp; </p>
-            </a>
+             Contact Us |</a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Home to Hollywood">Blogs |</a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">Disclaimer |</a>
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">Write a Review |</a>
 
           </div>
 
-          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cities">
+          <!--<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cities">
             <h3>Our Presence Across the World</h3>
 
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <h4>USA</h4>
+
 
 
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
@@ -179,7 +185,7 @@
           </div>
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
-            <h4>India</h4>
+
 
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Tech hub of India">
               <p>Bengaluru &nbsp; &nbsp; &nbsp; </p>
@@ -196,7 +202,7 @@
 
 
           </div>
-          </div>
+          </div>-->
           <!--<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
             <div class="logos">
