@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>What's in my City</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +13,8 @@
 
   <!-- Latest compiled and minified Bootstrap JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
   <script>
     $(document).ready(function() {
       $('[data-toggle="tooltip"]').tooltip();
@@ -21,6 +22,16 @@
   </script>
 </head>
 <body>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class = "modal-content">
+    <div class="modal-body">
+      <h3>Please Login to Continue</h3>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+    </div>
+  </div>
+</ng-template>
 <div class="container-fluid">
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
@@ -37,6 +48,7 @@
           <a class="headingrefForMob">What's in my City?</a>
           <a (click)="logoutClicked($event)"><button type="button" class="btn" style="align:right">Logout</button></a>
         </div>
+
       <!--Carousel starts here-->
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-caption">
@@ -76,7 +88,7 @@
                       </div>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-success" (click) = "searchValidation()"><img src="assets/images/search.png" /> &nbsp; Search</button> <span id="resultError"></span>
+                  <button type="submit" class="btn btn-success" (click) = "searchValidation(content)"><img src="assets/images/search.png" /> &nbsp; Search</button> <span id="resultError"></span>
                 </form>
                 <div>
                   <ul class="nav">
