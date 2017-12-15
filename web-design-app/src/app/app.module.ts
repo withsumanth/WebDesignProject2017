@@ -13,6 +13,10 @@ import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { IndexComponent } from './index/index.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CareersComponent } from './careers/careers.component';
+import { AboutBangaloreComponent } from './about-bangalore/about-bangalore.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
     IndexComponent,
     CreateUserPageComponent,
     SignInPageComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    CareersComponent,
+    AboutBangaloreComponent
   ],
   imports: [
     BrowserModule,
