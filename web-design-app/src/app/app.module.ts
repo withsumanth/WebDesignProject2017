@@ -17,6 +17,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CareersComponent } from './careers/careers.component';
 import { AboutBangaloreComponent } from './about-bangalore/about-bangalore.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AboutBangaloreComponent } from './about-bangalore/about-bangalore.compo
     AboutUsComponent,
     ContactUsComponent,
     CareersComponent,
-    AboutBangaloreComponent
+    AboutBangaloreComponent,
+    DisclaimerComponent
   ],
   imports: [
     BrowserModule,
