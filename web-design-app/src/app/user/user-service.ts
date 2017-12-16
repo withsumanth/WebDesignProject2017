@@ -56,4 +56,14 @@ export class UserService {
     return this._http.post('http://localhost/ProjectPhp/selectRestaurants.php/', {'searchValue': 'SHOPPING', 'city': values} , this.options)
       .map( res => res.json());
   }
+
+  contactUs(name ,email , msg){
+    return this._http.post('http://localhost/ProjectPhp/contactus.php/', {'name':name,'email':email,'msg':msg} , this.options)
+      .map(() => '');
+  }
+
+  careerRequest(name ,email ,phone, msg){
+    return this._http.post('http://localhost/ProjectPhp/career.php/', {'name':name,'email':email,'phone':phone,'msg':msg} , this.options)
+      .map(() => '');
+  }
 }

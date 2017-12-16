@@ -27,6 +27,7 @@ const routes: Routes = [
   {path: 'placesofint', component: PlacesofintComponent},
   {path: 'ntlife', component: NightlifeComponent},
   {path: 'shopping', component: ShoppingComponent},
+  {path: 'career', component: CareersComponent},
 ];
 
 
