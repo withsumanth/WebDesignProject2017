@@ -25,8 +25,6 @@ import { ShoppingComponent } from './shopping/shopping.component';
 import { LasVegasIndividualPageComponent } from './las-vegas-individual-page/las-vegas-individual-page.component';
 import { BostonIndividualPageComponent } from './boston-individual-page/boston-individual-page.component';
 import { NagpurIndividualPageComponent } from './nagpur-individual-page/nagpur-individual-page.component';
-import { MumbaiComponent } from './mumbai/mumbai.component';
-import { MumbaiIndividualPagwComponent } from './mumbai-individual-pagw/mumbai-individual-pagw.component';
 import { MumbaiIndividualPageComponent } from './mumbai-individual-page/mumbai-individual-page.component';
 import { HyderabadIndividualPageComponent } from './hyderabad-individual-page/hyderabad-individual-page.component';
 import { LosAngelesIndividualPageComponent } from './los-angeles-individual-page/los-angeles-individual-page.component';
@@ -51,8 +49,6 @@ import { NycindividualPageComponent } from './nycindividual-page/nycindividual-p
     LasVegasIndividualPageComponent,
     BostonIndividualPageComponent,
     NagpurIndividualPageComponent,
-    MumbaiComponent,
-    MumbaiIndividualPagwComponent,
     MumbaiIndividualPageComponent,
     HyderabadIndividualPageComponent,
     LosAngelesIndividualPageComponent,
