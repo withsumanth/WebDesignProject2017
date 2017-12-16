@@ -22,6 +22,15 @@ import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 import { PlacesofintComponent } from './placesofint/placesofint.component';
 import { NightlifeComponent } from './nightlife/nightlife.component';
 import { ShoppingComponent } from './shopping/shopping.component';
+import { LasVegasIndividualPageComponent } from './las-vegas-individual-page/las-vegas-individual-page.component';
+import { BostonIndividualPageComponent } from './boston-individual-page/boston-individual-page.component';
+import { NagpurIndividualPageComponent } from './nagpur-individual-page/nagpur-individual-page.component';
+import { MumbaiComponent } from './mumbai/mumbai.component';
+import { MumbaiIndividualPagwComponent } from './mumbai-individual-pagw/mumbai-individual-pagw.component';
+import { MumbaiIndividualPageComponent } from './mumbai-individual-page/mumbai-individual-page.component';
+import { HyderabadIndividualPageComponent } from './hyderabad-individual-page/hyderabad-individual-page.component';
+import { LosAngelesIndividualPageComponent } from './los-angeles-individual-page/los-angeles-individual-page.component';
+import { NycindividualPageComponent } from './nycindividual-page/nycindividual-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +47,16 @@ import { ShoppingComponent } from './shopping/shopping.component';
     EventsComponent,
     PlacesofintComponent,
     NightlifeComponent,
-    ShoppingComponent
+    ShoppingComponent,
+    LasVegasIndividualPageComponent,
+    BostonIndividualPageComponent,
+    NagpurIndividualPageComponent,
+    MumbaiComponent,
+    MumbaiIndividualPagwComponent,
+    MumbaiIndividualPageComponent,
+    HyderabadIndividualPageComponent,
+    LosAngelesIndividualPageComponent,
+    NycindividualPageComponent
   ],
   imports: [
     BrowserModule,
