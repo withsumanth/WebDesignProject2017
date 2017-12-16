@@ -328,3 +328,11 @@ li a {
   color: white;
   display: inline;
 }
+
+#optionValue{
+  background-color: rgba(0, 0, 255,0.3) !important;
+}
+
+#liId6,#liId1,#liId2,#liId3,#liId4,#liId5{
+  cursor: pointer;
+}

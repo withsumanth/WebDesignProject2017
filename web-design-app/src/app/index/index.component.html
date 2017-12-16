@@ -97,8 +97,8 @@
                   <div class="form-group" id="cities">
                     <div class="form-group" >
                       <div class="dropdown" >
-                        <select id="selectValue" style="width: 300px;height:47px ;margin-right:20px">
-                          <option *ngFor="let city of citiesList">
+                        <select id="selectValue" style="width: 300px;height:47px;">
+                          <option id="optionValue" *ngFor="let city of citiesList">
                             {{city.Name}}
                           </option>
                         </select>
@@ -112,21 +112,21 @@
                 <div class="well well-lg">
                   <ul class="nav">
                     <li class="nav-item" id="liId">
-                      <a class="nav-link" href="#"><img src="assets/images/dinner.png"/><p class="categorySearch" style="margin-right: 16px"> &nbsp; Food </p>&nbsp; </a>
+                      <a class="nav-link" id="liId6" (click)="rest(content)"><img src="assets/images/dinner.png"/><p class="categorySearch" style="margin-right: 16px"> &nbsp; Food </p>&nbsp; </a>
                     </li>
 
 
                     <li class="nav-item" id="liId1">
-                      <a class="nav-link" href="#"><img src="assets/images/shopper-with-bags.png" /><p class="categorySearch"> &nbsp; Shopping </p> &nbsp; </a>
+                      <a class="nav-link" (click)="shop(content)"><img src="assets/images/shopper-with-bags.png" /><p class="categorySearch"> &nbsp; Shopping </p> &nbsp; </a>
                     </li>
                     <li class="nav-item" id="liId2">
-                      <a class="nav-link" href="#"><img src="assets/images/event.png" /><p class="categorySearch" style="margin-right: 16px"> &nbsp; Events </p> &nbsp; </a>
+                      <a class="nav-link" (click)="ev(content)"><img src="assets/images/event.png" /><p class="categorySearch" style="margin-right: 16px"> &nbsp; Events </p> &nbsp; </a>
                     </li>
                     <li class="nav-item" id="liId3">
-                      <a class="nav-link" href="#"><img src="assets/images/cocktail-glass.png" /><p class="categorySearch"> &nbsp; Nightlife </p>&nbsp; </a>
+                      <a class="nav-link" (click)="ntlif(content)"><img src="assets/images/cocktail-glass.png" /><p class="categorySearch"> &nbsp; Nightlife </p>&nbsp; </a>
                     </li>
                     <li class="nav-item" id="liId4">
-                      <a class="nav-link" href="#"><img src="assets/images/library.png" /><p class="categorySearch"> &nbsp; Places of interest </p> &nbsp; </a>
+                      <a class="nav-link" (click)="placint(content)"><img src="assets/images/library.png" /><p class="categorySearch"> &nbsp; Places of interest </p> &nbsp; </a>
                     </li>
                     <li class="nav-item" id="liId5">
                       <a class="nav-link" href="#"><img src="assets/images/learning.png" /><p class="categorySearch"> &nbsp; E-Learning </p> &nbsp; </a>
@@ -217,42 +217,43 @@
             </div>-->
         <div class="row" style="margin-top: 30px">
 
-              <h1 style="margin-top: 10px;margin-left: 470px;margin-bottom: 30px">Our Presence spans across India and USA</h1>
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center ;margin-bottom: 20px">
 
-            <div class="clearfix"></div>
+              <h1 >Our Presence spans across India and USA</h1>
+          </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236"></a>
+                <a [routerLink]="['/bangalore']"><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236"></a>
+                <a [routerLink]="['/hyderabad']"><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236"></a>
+                <a [routerLink]="['/mumbai']"><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236"></a>
+                <a [routerLink]="['/nagpur']"><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236"></a>
               </div>
 
              <div class="whiteBorder"></div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236"></a>
+                <a [routerLink]="['/boston']"><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236"></a>
+                <a [routerLink]="['/losangeles']"><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236"></a>
+                <a [routerLink]="['/lasvegas']"><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a href="#"><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236"></a>
+                <a [routerLink]="['/newyork']"><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236"></a>
               </div>
 
 

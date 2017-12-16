@@ -103,19 +103,77 @@ export class IndexComponent implements OnInit {
               };
               this.router.navigate(['/shopping'], navigationExtras);
             }
-            /*this.values.add($('#selectValue').val().toString().toUpperCase());
-
-            this.userService
-              .selectData(this.values)
-              .subscribe(restaurants => {
-                this.restaurants = restaurants;}, this.nextPage());*/
           }else{
             $('#resultError').html('No Result');
             return false;
           }
-        //}
 
     }
+
+  rest(content) {
+    let check: boolean = false;
+    // if(!this.isUserLoggedIn){
+    //this.modalService.open(content);
+    //}else{
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "cityName": $('#selectValue').val().toString().toUpperCase()
+      }
+    }
+    this.router.navigate(['/restaurants'], navigationExtras);
+  }
+
+  shop(content) {
+    let check: boolean = false;
+    // if(!this.isUserLoggedIn){
+    //this.modalService.open(content);
+    //}else{
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "cityName": $('#selectValue').val().toString().toUpperCase()
+      }
+    }
+    this.router.navigate(['/shopping'], navigationExtras);
+  }
+
+  ev(content) {
+    let check: boolean = false;
+    // if(!this.isUserLoggedIn){
+    //this.modalService.open(content);
+    //}else{
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "cityName": $('#selectValue').val().toString().toUpperCase()
+      }
+    }
+    this.router.navigate(['/events'], navigationExtras);
+  }
+
+  ntlif(content) {
+    let check: boolean = false;
+    // if(!this.isUserLoggedIn){
+    //this.modalService.open(content);
+    //}else{
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "cityName": $('#selectValue').val().toString().toUpperCase()
+      }
+    }
+    this.router.navigate(['/ntlife'], navigationExtras);
+  }
+
+  placint(content) {
+    let check: boolean = false;
+    // if(!this.isUserLoggedIn){
+    //this.modalService.open(content);
+    //}else{
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        "cityName": $('#selectValue').val().toString().toUpperCase()
+      }
+    }
+    this.router.navigate(['/placesofint'], navigationExtras);
+  }
 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {

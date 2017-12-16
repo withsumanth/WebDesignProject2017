@@ -12,6 +12,14 @@ import { PlacesofintComponent } from './placesofint/placesofint.component';
 import { NightlifeComponent } from './nightlife/nightlife.component';
 import { ShoppingComponent } from './shopping/shopping.component';
 import { CareersComponent } from './careers/careers.component';
+import { LasVegasIndividualPageComponent } from './las-vegas-individual-page/las-vegas-individual-page.component';
+import { BostonIndividualPageComponent } from './boston-individual-page/boston-individual-page.component';
+import { NagpurIndividualPageComponent } from './nagpur-individual-page/nagpur-individual-page.component';
+import { MumbaiIndividualPageComponent } from './mumbai-individual-page/mumbai-individual-page.component';
+import { HyderabadIndividualPageComponent } from './hyderabad-individual-page/hyderabad-individual-page.component';
+import { LosAngelesIndividualPageComponent } from './los-angeles-individual-page/los-angeles-individual-page.component';
+import { NycindividualPageComponent } from './nycindividual-page/nycindividual-page.component';
+import { WriteAreviewComponent } from './write-areview/write-areview.component';
 import { AboutBangaloreComponent } from './about-bangalore/about-bangalore.component';
 
 const routes: Routes = [
@@ -28,6 +36,14 @@ const routes: Routes = [
   {path: 'ntlife', component: NightlifeComponent},
   {path: 'shopping', component: ShoppingComponent},
   {path: 'career', component: CareersComponent},
+  {path: 'lasvegas', component: LasVegasIndividualPageComponent},
+  {path: 'boston', component: BostonIndividualPageComponent},
+  {path: 'nagpur', component: NagpurIndividualPageComponent},
+  {path: 'mumbai', component: MumbaiIndividualPageComponent},
+  {path: 'hyderabad', component: HyderabadIndividualPageComponent},
+  {path: 'losangeles', component: LosAngelesIndividualPageComponent},
+  {path: 'newyork', component: NycindividualPageComponent},
+  {path: 'bangalore', component: AboutBangaloreComponent},
 ];
 
 
