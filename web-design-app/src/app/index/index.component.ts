@@ -25,7 +25,7 @@ export class IndexComponent implements OnInit {
     'Name': 'Boston',
   },
     {
-      'Name': 'New York City',
+      'Name': 'New York',
     },
     {
       'Name': 'Los Angeles',
@@ -57,9 +57,9 @@ export class IndexComponent implements OnInit {
   }
     searchValidation(content){
         let check: boolean = false;
-        if(!this.isUserLoggedIn){
-          this.modalService.open(content);
-        }else{
+       // if(!this.isUserLoggedIn){
+          //this.modalService.open(content);
+        //}else{
           for(var i=0;i<this.searchList.length;i++){
             if($('#searchInput').val().toString().toUpperCase()=== this.searchList[i].toUpperCase()){
               check = true;
@@ -74,6 +74,34 @@ export class IndexComponent implements OnInit {
                 }
               };
               this.router.navigate(['/restaurants'], navigationExtras);
+            }else if($('#searchInput').val().toString().toUpperCase() === 'EVENTS'){
+              let navigationExtras: NavigationExtras = {
+                queryParams: {
+                  "cityName": $('#selectValue').val().toString().toUpperCase()
+                }
+              };
+              this.router.navigate(['/events'], navigationExtras);
+            }else if($('#searchInput').val().toString().toUpperCase() === 'PLACES OF INTEREST'){
+              let navigationExtras: NavigationExtras = {
+                queryParams: {
+                  "cityName": $('#selectValue').val().toString().toUpperCase()
+                }
+              };
+              this.router.navigate(['/placesofint'], navigationExtras);
+            }else if($('#searchInput').val().toString().toUpperCase() === 'NIGHTLIFE'){
+              let navigationExtras: NavigationExtras = {
+                queryParams: {
+                  "cityName": $('#selectValue').val().toString().toUpperCase()
+                }
+              };
+              this.router.navigate(['/ntlife'], navigationExtras);
+            }else if($('#searchInput').val().toString().toUpperCase() === 'SHOPPING'){
+              let navigationExtras: NavigationExtras = {
+                queryParams: {
+                  "cityName": $('#selectValue').val().toString().toUpperCase()
+                }
+              };
+              this.router.navigate(['/shopping'], navigationExtras);
             }
             /*this.values.add($('#selectValue').val().toString().toUpperCase());
 
@@ -85,7 +113,7 @@ export class IndexComponent implements OnInit {
             $('#resultError').html('No Result');
             return false;
           }
-        }
+        //}
 
     }
 

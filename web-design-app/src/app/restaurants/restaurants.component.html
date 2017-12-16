@@ -17,7 +17,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
 </head>
 
 <body class="main_body">
@@ -45,93 +46,74 @@
 </nav>-->
 
 
-<div class="container-fluid" style="background-color: #000000;height: 120px;">
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #000000">
+<div class="container-fluid" style="background-color: #f78733;height: 120px;">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="background-color: #f78733">
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-      <a class="navbar-brand" href="#"><img src="../assets/images/logo.png" class="main_logo" style="height:75px"/></a>
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../assets/images/logo.png" class="main_logo" style="height:100px"/></a>
     </div>
-    <div class="col-lg-offset-4 col-md-offset-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
-     <p class="text">What's in My City?</p> <button type="submit" class="btn btn-primary btn-lg" (click) = "onClick()" id="logout">Logout</button>
-    </div>
+    <p class="textForResp">What's in My City?</p>
   </div>
+  <button type="submit" class="btn btn-lg" (click) = "onClick()" id="logout" style="background-color: #00a86b;color: white">Logout</button>
 </div>
 
 <div id="section1" class="container-fluid" >
 
-  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <h2 class = "main_heading">Restaurents in Boston</h2><br><br>
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="restHeading">
+    <h2 class = "main_heading">RESTAURANTS IN {{cityName}}</h2><br><br>
   </div>
 
   <ng-template #content let-c="close" let-d="dismiss">
     <div class = "modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Hi there!</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-
       <div class="modal-body">
-        <div class="" id="moreInfo">More Information</div>
+        <div class="" id="moreInfo"><h3>More Information</h3></div>
         <div id ="toBeHidden" class=" col-lg-6 col-md-6 col-sm-12 col-xs-12" >
           <label >Rating:{{resData.Rating}}</label><br>
-          <label >Opens at:{{resData.FromTime}}</label><br>
+          <span class="fa fa-star {{starName[0]}}"></span>
+          <span class="fa fa-star {{starName[1]}}"></span>
+          <span class="fa fa-star {{starName[2]}}"></span>
+          <span class="fa fa-star {{starName[3]}}"></span>
+          <span class="fa fa-star {{starName[4]}}"></span>
           <h3>Map:</h3>
           <iframe [src]="cleanURL(resData.Map)" width="600" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+        <button type="button" class="btn btn-outline-dark btn-primary" (click)="c('Close click')">Close</button>
       </div>
     </div>
   </ng-template>
 
-  <div  class="main_content" >
-    <table class="table  borderless" id="table1" *ngFor="let restaurent of restaurants" >
+  <div  class="main_content">
+    <table class="table borderless" id="table1" *ngFor="let restaurent of restaurants" >
       <tbody >
       <tr class="rw" >
         <td >
 
           <div class="" >
-            <div class="">
+            <div class="contact_info col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
               <img src={{restaurent.Image}} alt = "image1" class="media-object initial_image" style="width:470px;height:240px">
-            </div>
-            <div class="">
-              <div class = "description">
               <h4 >{{restaurent.Cuisine}}</h4>
               <h2 class="">{{restaurent.Name}}</h2>
               <p >{{restaurent.Address}}</p>
-              </div>
-
-              <br>
-              <br>
-
-              <div class="">
-
-                <div class="contact_info col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                   <label >Contact Number:{{restaurent.Phonenumber}}</label><br>
+                  <label >Opens at:{{restaurent.FromTime}}</label>&nbsp;
                   <label >Closes at:{{restaurent.ToTime}}</label>
-                </div>
-
                 <span style="cursor:pointer">
                 <div class="panel-body col-lg-12 col-md-12 col-sm-12 col-xs-12 " (click)="modalopen(content,restaurent)">
-                  <div class="panel panel-default" >
-                    <div class="panel-heading">More Information</div>
+                  <div id="moreInfoId" class="panel panel-default" >
+                    <div class="panel-heading"><b>More Information</b></div>
                   </div>
-
                 </div>
                 </span>
-
-              </div>
 
 
             </div>
           </div>
-          <div class="blackBorder"></div>
         </td>
       </tr>
 
       </tbody>
+      <div id="borderAfter"></div>
     </table>
 
   </div>
@@ -152,14 +134,11 @@
             <!--<a href="">About Us</a> <br> <a href="">Contact Us</a><br> <a href="">Blogs</a><br><a href="">Disclaimer</a>
             <br> <a class="headingrefForReview" href="#"> Write a Review</a>-->
 
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
+            <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom" title="Nicknamed as 'The Hub', home to numerous educational instiutions">
               About Us |</a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of World">
+            <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" title="Financial Capital of World">
              Contact Us |</a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Home to Hollywood">Blogs |</a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">Disclaimer |</a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">Write a Review |</a>
-
+            <a [routerLink]="['/loginuser']" data-toggle="tooltip" data-placement="bottom" title="Famous for it's casinos & resorts">Disclaimer</a>
           </div>
 
           <!--<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 cities">

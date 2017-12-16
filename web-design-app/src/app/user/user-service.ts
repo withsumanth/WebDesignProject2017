@@ -33,9 +33,27 @@ export class UserService {
   }
 
   selectData(values){
-    //if(values === 'BOSTON') {
-      return this._http.post('http://localhost/ProjectPhp/selectRestaurants.php/', {'searchValue': 'RESTAURANT', 'city': values} , this.options)
+    return this._http.post('http://localhost/ProjectPhp/selectRestaurants.php/', {'searchValue': 'RESTAURANT', 'city': values} , this.options)
         .map( res => res.json());
-    //}
+  }
+
+  selectDataEvents(values){
+    return this._http.post('http://localhost/ProjectPhp/selectEvents.php/', {'searchValue': 'EVENTS', 'city': values} , this.options)
+      .map( res => res.json());
+  }
+
+  selectDataPlaceofInt(values){
+    return this._http.post('http://localhost/ProjectPhp/selectPlaceOfInt.php/', {'searchValue': 'PLACESOFINTEREST', 'city': values} , this.options)
+      .map( res => res.json());
+  }
+
+  selectDataNightLife(values){
+    return this._http.post('http://localhost/ProjectPhp/selectRestaurants.php/', {'searchValue': 'NIGHTLIFE', 'city': values} , this.options)
+      .map( res => res.json());
+  }
+
+  selectDataShopping(values){
+    return this._http.post('http://localhost/ProjectPhp/selectRestaurants.php/', {'searchValue': 'SHOPPING', 'city': values} , this.options)
+      .map( res => res.json());
   }
 }

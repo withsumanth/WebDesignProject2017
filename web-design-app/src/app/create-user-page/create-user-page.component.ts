@@ -69,6 +69,8 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
         } else {
             var retVal = confirm("Are you sure you want to create an account with us?");
                if( retVal == true ){
+                 this.model.code = this.makeid();
+                 console.log(this.model);
                   this.userService
                 .onSignup(this.model)
                 .subscribe(() => this.goBack());
@@ -130,5 +132,15 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
             }
         }
     }
+
+    makeid() {
+     var text: string = "";
+    var possible:string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+  }
 
 }

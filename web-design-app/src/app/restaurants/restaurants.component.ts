@@ -4,7 +4,6 @@ import {Router} from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../user/user-service';
 import { Restaurants } from '../searchObjects/restaurants';
-import { ModalModule } from 'ngx-bootstrap';
 import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { Overlay, overlayConfigFactory } from 'angular2-modal';
 import * as $ from 'jquery';
@@ -22,7 +21,7 @@ export class RestaurantsComponent implements OnInit {
 
   cityName: any;
   closeResult: string;
-  mapName: any[];
+  starName: any[];
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.cityName = params["cityName"];
@@ -44,8 +43,17 @@ export class RestaurantsComponent implements OnInit {
 
   modalopen(content,r:Restaurants){
     this.resData=r;
+    this.starName = ['','','','',''];
+    var myInt3 = parseInt(r.Rating);
+    for(var i=0;i<myInt3;i++){
+      this.starName[i] = 'checked';
+    }
     this.modalService.open(content,{
       size:'lg',
+    }).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
 

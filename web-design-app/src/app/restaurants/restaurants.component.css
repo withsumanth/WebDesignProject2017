@@ -29,7 +29,7 @@ body {
 #section1 {
   padding-top: 50px;
   color: #fff;
-  background-color: #4abdac;
+  background-color: white;
 }
 
 #table1 {
@@ -44,22 +44,28 @@ body {
 .main_content{
   margin-left:120px;
   margin-right: 120px;
+  font-family: Cabin;
+  color: black;
+
 }
 
 .main_heading{
-  margin-left:620px;
   color: #ffffff;
+  align-items: center;
+  text-align: center;
+  font-family: Cabin;
+  color: black;
 }
 
 #footer{
-  background-color: #000;
+  background-color: #4d4d4d;
 }
 
 .foursections a{
   text-decoration: none;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1024px) {
   .initial_image {
     width: 175px;
     float: left;
@@ -68,14 +74,14 @@ body {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1024px) {
  .panel{
    width:350px;
    margin-left:-130px;
  }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1024px) {
  .description{
    margin-left:-50px;
  }
@@ -84,7 +90,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1024px) {
   .main_heading{
     margin:auto;
   }
@@ -98,7 +104,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 1024px) {
   tr{
     margin-top:70px;
   }
@@ -111,13 +117,14 @@ body {
 
 .blackBorder{
   margin-top:50px;
+  border:2px solid #000000;
 }
 
 .panel .panel-warning .panel-body{
   background-color: #000;
 }
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 1024px){
   .altBtns{
     visiblity:visible;
   }
@@ -143,11 +150,12 @@ body {
   transform: translate(-50%, -50%);
   /* If known, negative margins are probably better (less chance of blurry text). */
   /* margin: -200px 0 0 -200px; */
-  background: white;
+  background: #ccccff;
   box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.9);
 }
 
 .modal-content {
+  background: #b4dbc0;
   position: absolute;
   top: 10%;
 }
@@ -164,9 +172,12 @@ body {
   color: #fff;
 }
 
+.textForResp{
+  display: none;
+}
 
 
-@media only screen and (max-width: 375px){
+@media only screen and (max-width: 1024px){
   .main_body{
     width:435px;
   }
@@ -196,12 +207,81 @@ body {
   display: none;
 }
 
-.text{
-  display: inline;
+.textForResp{
+  display: inline-block;
+  color: white;
+  align-items: center;
 }
 
 }
 
-.text{
-  display: none;
+.checked {
+  color: #cc0000;
+}
+
+.wrapper input {
+  border: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  opacity: 0;
+}
+
+.wrapper label {
+  position: relative;
+  float: right;
+  color: #C8C8C8;
+}
+
+.wrapper label:before {
+  margin: 5px;
+  content: "\f005";
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 1.5em;
+  color: #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.wrapper input:checked ~ label:before {
+  color: #FFC107;
+}
+
+#moreInfo{
+  text-align: center;
+}
+
+#borderAfter{
+  border: 1px solid #000000;
+  width: 93%;
+}
+
+.panel-body{
+  margin-left: -19px;
+  width:160%;
+}
+
+.panel-heading{
+  background-color: #008f95 !important;
+}
+
+#logout{
+  float: right;
+}
+
+.main_logo{
+  margin-left: 100px;
+}
+
+#restHeading{
+/*background-image: url('/assets/images/food.jpg');
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;*/
 }

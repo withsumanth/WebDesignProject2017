@@ -3,10 +3,11 @@ Name: string;
 City: string;
 Venue: string;
 Description: string;
-Link: string;
+Map: string;
 ID: string;
 Phonenumber: string;
 Time: string;
 Price: string;
 Image: string;
+Rating:string;
 }
