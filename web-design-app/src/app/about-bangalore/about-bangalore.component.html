@@ -21,12 +21,11 @@
   </script>
 </head>
 <body>
-<nav class="navbar navbar-inverse"  data-offset-top="197" style="height: 100px">
+<nav id="logoIm" class="navbar navbar-inverse"  data-offset-top="197" style="height: 100px">
   <div class="container-fluid">
-    <div class="navbar-header">
 
-      <a class="navbar-brand" href="#"><img src="../../assets/images/logo.png" height="70" width="200"/></a>
-    </div>
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/logo.png" height="70" width="200"/></a>
+
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <form class="form-inline">
@@ -34,8 +33,6 @@
           <div class="form-group button_grop" style="float: right">
             <button type="submit" class="btn btn-warning " id="myAccount">My Account</button>
             <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login">Logout</button>
-
-
 
           </div>
         </form>
@@ -67,12 +64,12 @@
 
 
 
-                <h2><b><a href="#places of interest">Places to Visit</a></b></h2>
+                <h2 (click)="placeofint()"><b><a>Places to Visit</a></b></h2>
                   <div class="row">
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/Bangalore_Palace.jpg" height="500" width="500"/> </a>
+                        <a ><img src="../../assets/images/Bangalore_Palace.jpg" height="500" width="500"/> </a>
                         </div>
                       <div class="caption">
                         <p>Bangalore Palace</p>
@@ -81,7 +78,7 @@
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/lalbagh.jpg" height="500" width="500"/></a>
+                        <a ><img src="../../assets/images/lalbagh.jpg" height="500" width="500"/></a>
                        </div>
                       <div class="caption">
                         <p>Lalbagh</p>
@@ -89,11 +86,11 @@
                     </div>
 
 
-                  <h2><b><a href="#shopping">Best Places to Shop</a></b></h2>
+                  <h2 (click)="shopping()"><b><a>Best Places to Shop</a></b></h2>
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/UB_City.jpg" height="500" width="500"/> </a>
+                        <a><img src="../../assets/images/UB_City.jpg" height="500" width="500"/> </a>
                       </div>
                       <div class="caption">
                         <p>UB City</p>
@@ -102,18 +99,18 @@
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/Commercial-Street-Bangalore.jpg" height="530" width="500"/></a>
+                        <a><img src="../../assets/images/Commercial-Street-Bangalore.jpg" height="530" width="500"/></a>
                       </div>
                       <div class="caption">
                         <p>Commercial Street</p>
                       </div>
                     </div>
 
-                    <h2><b><a href="#food">Nightlife</a></b></h2>
+                    <h2 (click)="ntlife()"><b><a >Nightlife</a></b></h2>
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/churchstreetsocial.jpg" height="500" width="500"/> </a>
+                        <a ><img src="../../assets/images/churchstreetsocial.jpg" height="500" width="500"/> </a>
                       </div>
                       <div class="caption">
                         <p>Church Street Social</p>
@@ -122,7 +119,7 @@
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/The-Biere-Club-Bangalore.jpg" height="530" width="500"/></a>
+                        <a ><img src="../../assets/images/The-Biere-Club-Bangalore.jpg" height="530" width="500"/></a>
                       </div>
                       <div class="caption">
                         <p>The Biere Club</p>
@@ -130,22 +127,22 @@
                     </div>
 
 
-                    <h2><b><a href="#food">Events</a></b></h2>
+                    <h2 (click)="events()"><b><a >Events</a></b></h2>
 
                     <div class="col-md-12">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/bangalore_standup_comedy.jpg" height="350" width="1000"/> </a>
+                        <a ><img src="../../assets/images/bangalore_standup_comedy.jpg" height="350" width="1000"/> </a>
                       </div>
                       <div class="caption">
                         <p>Standup Comedy</p>
                       </div>
                     </div>
 
-                    <h2><b><a href="#food">Restaurents</a></b></h2>
+                    <h2 (click)="rest()"><b><a >Restaurents</a></b></h2>
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/karavalli.jpg" height="500" width="500"/> </a>
+                        <a ><img src="../../assets/images/karavalli.jpg" height="500" width="500"/> </a>
                       </div>
                       <div class="caption">
                         <p>Karavalli</p>
@@ -154,7 +151,7 @@
 
                     <div class="col-md-6">
                       <div class="thumbnail">
-                        <a href="#"><img src="../../assets/images/shiro.jpg" height="530" width="500"/></a>
+                        <a ><img src="../../assets/images/shiro.jpg" height="530" width="500"/></a>
                       </div>
                       <div class="caption">
                         <p>Shiro</p>
@@ -163,12 +160,6 @@
 
 
             </div>
-
-
-
-
-
-
 
           </div>
         </div>
@@ -185,12 +176,12 @@
             <h4>General Information</h4>
 
 
-            <a href="#" data-toggle="tooltip" data-placement="bottom">
+            <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
               About Us |</a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" >
+            <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
               Contact Us |</a>
 
-            <a href="#" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a>
+            <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a>
 
 
           </div>

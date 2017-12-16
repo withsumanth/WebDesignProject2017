@@ -27,7 +27,7 @@ export class PlacesofintComponent implements OnInit {
       this.cityName = params["cityName"];
     });
     this.userService
-      .selectDataNightLife(this.cityName)
+      .selectDataPlaceofInt(this.cityName)
       .subscribe(placesofins => {
         this.placesofins = placesofins;
       });
@@ -39,7 +39,6 @@ export class PlacesofintComponent implements OnInit {
 
   modalopen(content,r:Placesofins){
     this.resData=r;
-    console.log(this.resData);
     this.starName = ['','','','',''];
     var myInt3 = parseInt(r.Rating);
     for(var i=0;i<myInt3;i++){

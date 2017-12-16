@@ -34,7 +34,7 @@ export class IndexComponent implements OnInit {
       'Name': 'Las Vegas',
     },
     {
-      'Name': 'Bengaluru',
+      'Name': 'Bangalore',
     },
     {
       'Name': 'Hyderabad',

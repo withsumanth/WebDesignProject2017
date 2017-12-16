@@ -25,7 +25,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
 
-      <a class="navbar-brand" href="#"><img src="../../assets/images/logo.png" height="70" width="200"/></a>
+      <a [routerLink]="['/home']" class="navbar-brand" ><img src="../../assets/images/logo.png" height="70" width="200"/></a>
     </div>
     <div>
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -67,12 +67,12 @@
 
 
 
-              <h2><b><a href="#places of interest">Places to Visit</a></b></h2>
+              <h2 (click)="placeofint()"><b><a>Places to Visit</a></b></h2>
               <div class="row">
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/83271.jpg" height="500" width="500"/> </a>
+                    <a ><img src="../../assets/images/83271.jpg" height="500" width="500"/> </a>
                   </div>
                   <div class="caption">
                     <p>Red Rock Canyon National Conservation Area</p>
@@ -81,7 +81,7 @@
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/filename-las-vegas-sfco.jpg" height="500" width="500"/></a>
+                    <a ><img src="../../assets/images/filename-las-vegas-sfco.jpg" height="500" width="500"/></a>
                   </div>
                   <div class="caption">
                     <p>Luxor Las Vegas</p>
@@ -89,11 +89,11 @@
                 </div>
 
 
-                <h2><b><a href="#shopping">Best Places to Shop</a></b></h2>
+                <h2 (click)="shopping()"><b><a >Best Places to Shop</a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/child.jpg" height="500" width="500"/> </a>
+                    <a ><img src="../../assets/images/child.jpg" height="500" width="500"/> </a>
                   </div>
                   <div class="caption">
                     <p>Children's Orchard</p>
@@ -102,18 +102,18 @@
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/nord.jpg" height="530" width="500"/></a>
+                    <a ><img src="../../assets/images/nord.jpg" height="530" width="500"/></a>
                   </div>
                   <div class="caption">
                     <p>Nordstorm</p>
                   </div>
                 </div>
 
-                <h2><b><a href="#food">Nightlife</a></b></h2>
+                <h2 (click)="ntlife()"><b><a >Nightlife</a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/jack.jpg" height="500" width="500"/> </a>
+                    <a ><img src="../../assets/images/jack.jpg" height="500" width="500"/> </a>
                   </div>
                   <div class="caption">
                     <p>Jack's Irish Pub</p>
@@ -122,7 +122,7 @@
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/village.jpg" height="530" width="500"/></a>
+                    <a ><img src="../../assets/images/village.jpg" height="530" width="500"/></a>
                   </div>
                   <div class="caption">
                     <p>Village Pub</p>
@@ -130,22 +130,22 @@
                 </div>
 
 
-                <h2><b><a href="#food">Events</a></b></h2>
+                <h2 (click)="events()"><b><a >Events</a></b></h2>
 
                 <div class="col-md-12">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/aladdin.jpg" height="350" width="1000"/> </a>
+                    <a ><img src="../../assets/images/aladdin.jpg" height="350" width="1000"/> </a>
                   </div>
                   <div class="caption">
                     <p>Aladdin</p>
                   </div>
                 </div>
 
-                <h2><b><a href="#food">Restaurants</a></b></h2>
+                <h2 (click)="rest()"><b><a >Restaurants</a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/raku.jpg" height="500" width="500"/> </a>
+                    <a ><img src="../../assets/images/raku.jpg" height="500" width="500"/> </a>
                   </div>
                   <div class="caption">
                     <p>Raku</p>
@@ -154,7 +154,7 @@
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a href="#"><img src="../../assets/images/carsonkitchen.jpg" height="530" width="500"/></a>
+                    <a ><img src="../../assets/images/carsonkitchen.jpg" height="530" width="500"/></a>
                   </div>
                   <div class="caption">
                     <p>Carson Kitchen</p>
@@ -185,12 +185,12 @@
     <h4>General Information</h4>
 
 
-    <a href="#" data-toggle="tooltip" data-placement="bottom">
+    <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
       About Us |</a>
-    <a href="#" data-toggle="tooltip" data-placement="bottom" >
+    <a routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
       Contact Us |</a>
 
-    <a href="#" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a>
+    <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a>
 
 
   </div>

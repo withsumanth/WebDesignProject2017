@@ -1,3 +1,7 @@
 .button_grop{
   float: right;
 }
+
+h2{
+  cursor: pointer;
+}
