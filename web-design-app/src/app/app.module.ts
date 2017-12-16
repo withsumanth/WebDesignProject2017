@@ -31,6 +31,7 @@ import { LosAngelesIndividualPageComponent } from './los-angeles-individual-page
 import { NycindividualPageComponent } from './nycindividual-page/nycindividual-page.component';
 import { WriteAreviewComponent } from './write-areview/write-areview.component';
 import { MyAccountPageComponent } from './my-account-page/my-account-page.component';
+import { ElearningComponent } from './elearning/elearning.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { MyAccountPageComponent } from './my-account-page/my-account-page.compon
     LosAngelesIndividualPageComponent,
     NycindividualPageComponent,
     WriteAreviewComponent,
-    MyAccountPageComponent
+    MyAccountPageComponent,
+    ElearningComponent
   ],
   imports: [
     BrowserModule,
