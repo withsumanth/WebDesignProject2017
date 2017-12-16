@@ -29,6 +29,8 @@ import { MumbaiIndividualPageComponent } from './mumbai-individual-page/mumbai-i
 import { HyderabadIndividualPageComponent } from './hyderabad-individual-page/hyderabad-individual-page.component';
 import { LosAngelesIndividualPageComponent } from './los-angeles-individual-page/los-angeles-individual-page.component';
 import { NycindividualPageComponent } from './nycindividual-page/nycindividual-page.component';
+import { WriteAreviewComponent } from './write-areview/write-areview.component';
+import { MyAccountPageComponent } from './my-account-page/my-account-page.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { NycindividualPageComponent } from './nycindividual-page/nycindividual-p
     MumbaiIndividualPageComponent,
     HyderabadIndividualPageComponent,
     LosAngelesIndividualPageComponent,
-    NycindividualPageComponent
+    NycindividualPageComponent,
+    WriteAreviewComponent,
+    MyAccountPageComponent
   ],
   imports: [
     BrowserModule,
