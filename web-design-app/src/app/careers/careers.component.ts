@@ -10,27 +10,29 @@ import * as $ from 'jquery';
 })
 export class CareersComponent implements OnInit, AfterViewInit {
 
-  fileUpload:any;
+  fileUpload: any;
   loaded: boolean = false;
-  constructor(private userService: UserService, public modalService: NgbModal) { }
+
+  constructor(private userService: UserService, public modalService: NgbModal) {
+  }
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
-    $('#email').focus(function() {
+    $('#email').focus(function () {
       $('#emailError').html('');
       $('#signupError').html('');
     });
-    $('#name').focus(function() {
+    $('#name').focus(function () {
       $('#nameError').html('');
       $('#signupError').html('');
     });
-    $('#msg').focus(function() {
+    $('#msg').focus(function () {
       $('#msgError').html('');
       $('#signupError').html('');
     });
-    $('#phone').focus(function() {
+    $('#phone').focus(function () {
       $('#phoneError').html('');
       $('#signupError').html('');
     });
@@ -45,7 +47,7 @@ export class CareersComponent implements OnInit, AfterViewInit {
       alert('invalid format');
       return;
     }
-    this.fileUpload  =file;
+    this.fileUpload = file;
     this.loaded = false;
   }
 
@@ -97,9 +99,9 @@ export class CareersComponent implements OnInit, AfterViewInit {
     } else if (!regex1.test($("#phone").val())) {
       $('#phoneError').html('Phone Number format is wrong');
       return false;
-    }else{
+    } else {
       this.userService
-        .careerRequest($('#name').val(),$("#email").val(),$('#phone').val(),$('#msg').val())
+        .careerRequest($('#name').val(), $("#email").val(), $('#phone').val(), $('#msg').val())
         .subscribe();
       this.modalService.open(content);
       $('#name').val('');
@@ -115,7 +117,8 @@ export class CareersComponent implements OnInit, AfterViewInit {
     } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
       return 'by clicking on a backdrop';
     } else {
-      return  `with: ${reason}`;
+      return `with: ${reason}`;
     }
 
+  }
 }
