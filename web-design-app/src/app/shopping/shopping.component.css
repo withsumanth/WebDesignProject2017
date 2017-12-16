@@ -285,3 +285,8 @@ body {
     background-position: center;
     color: white;*/
 }
+
+.listofcities a{
+  text-decoration: none;
+  color:#ffffff;
+}

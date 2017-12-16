@@ -35,21 +35,20 @@
 </ng-template>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-8 col-xs-4">
+    <div class="">
       <div *ngIf="! isUserLoggedIn" class="heading">
         <h1> &nbsp; </h1>
-        <a class="headingref" href="#">Write a Review</a>
+        <a class="headingref" href="#" style="margin-left: 15px">Write a Review</a>
         <a class="headingrefForMob">What's in my City?</a>
 
         <!--<img class="logo" src="../../assets/images/logo.png" alt="Logo" width="200px">-->
 
-        <span class="dropdown">
+        <span class="dropdown" style="float: right">
         <a [routerLink]=""><button class="dropbtn1 headingref1">My Account</button></a>
 
           <span class="dropdown-content">
             <a href="#">Change my password</a>
-            <a href="#">Settings</a>
-            <a href="#">Link 3</a>
+            <a href="#">Logout</a>
           </span>
 
         </span>
@@ -64,7 +63,7 @@
         </div>
 
       <!--Carousel starts here-->
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide">
         <div class="carousel-caption">
           <!--Mobile Responsive search button starts here-->
           <div class="mrsearchBox">
@@ -86,12 +85,12 @@
                   <div class="form-group">
                     <input list="search" class="form-control" id = "searchInput" name="search" placeholder="Search" size="65" style="height:47px">
                     <datalist id="search" name="search">
-                      <option value="Food">
-                      <option value="Shopping">
-                      <option value="Events">
-                      <option value="Nightlife">
-                      <option value="Places of Interest">
-                      <option value="E-Learning">
+                      <option id ="category" value="Food">
+                      <option value="Shopping"  id ="category1">
+                      <option value="Events" id ="category2">
+                      <option value="Nightlife" id ="category3">
+                      <option value="Places of Interest" id ="category4">
+                      <option value="E-Learning" id ="category5">
                     </datalist>
                   </div>
                   <div class="form-group" id="cities">
@@ -314,7 +313,7 @@
 
 
             <br>
-            <p style="color:#ffffff;"><i>What's in my city? &copy;</i><a href="">About Us | </a><a href="">Contact Us | </a><a href="">Disclaimer | </a>
+            <p style="color:#ffffff;margin-left: 15px"><i>What's in my city? &copy;</i><a href="">About Us | </a><a href="">Contact Us | </a><a href="">Disclaimer | </a>
             <a class="headingrefForReview" href="#"> Write a Review</a></p>
 
           </div>

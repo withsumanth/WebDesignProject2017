@@ -336,3 +336,8 @@ li a {
 #liId6,#liId1,#liId2,#liId3,#liId4,#liId5{
   cursor: pointer;
 }
+
+#category, #category1,#category2,#category3,#category4,#category5{
+  background-color: rgba(0, 0, 255,0.3) !important;
+  font-family: "Times New Roman";
+}

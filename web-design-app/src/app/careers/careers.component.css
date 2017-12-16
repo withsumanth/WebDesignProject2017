@@ -32,3 +32,8 @@ modal {
   top: 10%;
 }
 
+.listofcities a{
+  text-decoration: none;
+  color: #ffffff;
+}
+

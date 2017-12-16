@@ -21,25 +21,25 @@
   </script>
 </head>
 <body>
-<nav class="navbar navbar-inverse"  data-offset-top="197" style="height: 100px">
+<nav class="navbar navbar-inverse"  style="height: 130px">
   <div class="container-fluid">
-    <div class="navbar-header">
 
-      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/logo.png" height="70" width="200"/></a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <form class="form-inline">
 
-          <div class="form-group button_grop" style="float: right">
-            <button type="submit" class="btn btn-warning " id="myAccount">My Account</button>
-            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login">Logout</button>
+      <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+
+      <div class="" id="myNavbar">
 
 
 
-          </div>
-        </form>
-      </div>
+            <!--<button type="submit" class="btn btn-warning " id="myAccount">My Account</button>-->
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+
+
+
+
+
+
     </div>
   </div>
 </nav>
@@ -57,7 +57,7 @@
 
             <img src="../../assets/images/mumbai.jpg" height="500" width="1200"/>
 
-            <div class="ourMission" style="margin-left: 150px">
+            <div class="ourMission" style="margin-left: 90px">
 
               <h2><b>Mumbai</b></h2>
               <p> Mumbai is the capital city of the Indian state of Maharashtra. It is the most populous city in India with an estimated city proper population of 12.4 million as of 2011. Along with the neighbouring regions of the Mumbai Metropolitan Region, it is second most populous metropolitan area in India, with a population of 21.3 million as of 2016. Mumbai lies on the Konkan on the west coast of India and has a deep natural harbour.</p>
@@ -67,7 +67,7 @@
 
 
 
-              <h2 (click)="placeofint()"><b><a >Places to Visit</a></b></h2>
+              <h2 (click)="placeofint()"><b><a >Best Places to Visit in Mumbai</a></b></h2>
               <div class="row">
 
                 <div class="col-md-6">
@@ -81,7 +81,7 @@
 
                 <div class="col-md-6">
                   <div class="thumbnail">
-                    <a ><img src="../../assets/images/kanheri.jpg" height="500" width="500"/></a>
+                    <a ><img src="../../assets/images/kanheri.JPG" height="500" width="500"/></a>
                   </div>
                   <div class="caption">
                     <p>Kanheri Caves</p>
@@ -89,7 +89,7 @@
                 </div>
 
 
-                <h2 (click)="shopping()"><b><a>Best Places to Shop</a></b></h2>
+                <h2 (click)="shopping()"><b><a>Best Places to Shop in Mumbai<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span></a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
@@ -109,7 +109,7 @@
                   </div>
                 </div>
 
-                <h2 (click)="ntlife()"><b><a >Nightlife</a></b></h2>
+                <h2 (click)="ntlife()"><b><a >Best Nightlife to enjoy in Mumbai<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
@@ -141,7 +141,7 @@
                   </div>
                 </div>
 
-                <h2 (click)="rest()"><b><a>Restaurants</a></b></h2>
+                <h2 (click)="rest()"><b><a>Best restaurents to dine in Mumbai<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
@@ -182,15 +182,9 @@
 <div class="container-fluid" style="background-color: black">
   <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
-    <h4>General Information</h4>
 
 
-    <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
-      About Us |</a>
-    <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
-      Contact Us |</a>
 
-    <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a>
 
 
   </div>
@@ -198,7 +192,12 @@
 
   <div class="listofcities">
     <br>
-    <p style="color:#000000;margin: auto"><i>What's in my city? &copy;</i></p>
+    <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i><a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+      About Us |</a>
+      <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+        Contact Us |</a>
+
+      <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
 
   </div>
 

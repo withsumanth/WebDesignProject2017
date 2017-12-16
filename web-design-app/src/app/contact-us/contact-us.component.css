@@ -35,3 +35,8 @@ modal {
   position: absolute;
   top: 10%;
 }
+
+.listofcities a{
+  text-decoration: none;
+  color:#ffffff;
+}

@@ -21,24 +21,21 @@
   </script>
 </head>
 <body>
-<nav class="navbar navbar-inverse"  data-offset-top="197" style="height: 100px">
+<nav class="navbar navbar-inverse" style="height: 130px">
   <div class="container-fluid">
-    <div class="navbar-header">
 
-      <a  [routerLink]="['/home']" class="navbar-brand" ><img src="../../assets/images/logo.png" height="70" width="200"/></a>
-    </div>
+
+      <a  [routerLink]="['/home']" class="navbar-brand" ><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
     <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <form class="form-inline">
-
-          <div class="form-group button_grop" style="float: right">
-            <button type="submit" class="btn btn-warning " id="myAccount">My Account</button>
-            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login">Logout</button>
+      <div class="" id="myNavbar">
 
 
 
-          </div>
-        </form>
+            <!--<button type="submit" class="btn btn-warning " id="myAccount">My Account</button>-->
+            <button type="submit" class="btn btn-primary " (click) = "onClick()" id="login" style="float: right">Logout</button>
+
+
       </div>
     </div>
   </div>
@@ -57,7 +54,7 @@
 
             <img src="../../assets/images/nagpur.jpg" height="500" width="1200"/>
 
-            <div class="ourMission" style="margin-left: 150px">
+            <div class="ourMission" style="margin-left: 90px">
 
               <h2><b>Nagpur</b></h2>
               <p> Nagpur is the winter capital, a sprawling metropolis, and the third-largest city of the Indian state of Maharashtra after Mumbai and Pune. Nagpur is the 13th largest Indian city in terms of population. It has been proposed as one of the Smart Cities in Maharashtra.</p>
@@ -67,7 +64,7 @@
 
 
 
-              <h2 (click)="placeofint()"><b><a >Places to Visit</a></b></h2>
+              <h2 (click)="placeofint()"><b><a >Best Places to Visit in Nagpur</a></b></h2>
               <div class="row">
 
                 <div class="col-md-6">
@@ -89,7 +86,7 @@
                 </div>
 
 
-                <h2 (click)="shopping()"><b><a >Best Places to Shop</a></b></h2>
+                <h2 (click)="shopping()"><b><a >Best Places to Shop in Nagpur<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</span></a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
@@ -109,7 +106,7 @@
                   </div>
                 </div>
 
-                <h2 (click)="ntlife()"><b><a >Nightlife</a></b></h2>
+                <h2 (click)="ntlife()"><b><a >Best Nightlife to enjoy in Nagpur<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
@@ -137,11 +134,11 @@
                     <a ><img src="../../assets/images/SkyWaltzBalloonSafari.jpg" height="350" width="1000"/> </a>
                   </div>
                   <div class="caption">
-                    <p>Sky Waltz Balloon Safari - Lonavala, Season 5</p>
+                    <p>Sky Waltz Balloon Safari - Season 5</p>
                   </div>
                 </div>
 
-                <h2 (click)="rest()"><b><a >Restaurants</a></b></h2>
+                <h2 (click)="rest()"><b><a >Best restaurents to dine in Nagpur<span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></a></b></h2>
 
                 <div class="col-md-6">
                   <div class="thumbnail">
@@ -182,15 +179,10 @@
 <div class="container-fluid" style="background-color: black">
   <div class="ftr col-lg-offset-4 col-md-offset-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">
 
-    <h4>General Information</h4>
 
 
-    <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
-      About Us |</a>
-    <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
-      Contact Us |</a>
 
-    <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a>
+
 
 
   </div>
@@ -198,7 +190,12 @@
 
   <div class="listofcities">
     <br>
-    <p style="color:#000000;margin: auto"><i>What's in my city? &copy;</i></p>
+    <p style="color:#ffffff;margin: auto"><i>What's in my city? &copy;</i> <a [routerLink]="['/about-us']" data-toggle="tooltip" data-placement="bottom">
+      About Us |</a>
+      <a [routerLink]="['/contact-us']" data-toggle="tooltip" data-placement="bottom" >
+        Contact Us |</a>
+
+      <a [routerLink]="['/disclaimer']" data-toggle="tooltip" data-placement="bottom">Disclaimer |</a></p>
 
   </div>
 
