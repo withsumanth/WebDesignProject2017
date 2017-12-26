@@ -33,7 +33,9 @@ export class EventsComponent implements OnInit {
   }
 
   onClick(){
-    console.log(this.events);
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
   }
 
   cleanURL(oldURL)  {

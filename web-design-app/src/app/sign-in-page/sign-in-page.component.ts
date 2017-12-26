@@ -1,7 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { User } from '../user/user';
 import { UserService } from '../user/user-service';
-import {Router} from '@angular/router';
+import {Router, NavigationExtras} from '@angular/router';
 import { FormGroup, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import * as $ from 'jquery';
 
@@ -14,6 +14,7 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
 
   private valueEntered: number;
   public user: User;
+  public loggedUser: User;
   model = new User();
   constructor(public userservice: UserService, private router: Router , fb: FormBuilder) {
     userservice
@@ -21,6 +22,7 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
       .subscribe(user => {
         this.user = user;
       });
+
   }
   onLogin() {
       if($('#email').val().toString().length.toString() === '0' || $('#password').val().toString().length.toString() === '0'){
@@ -29,8 +31,9 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
       }
     let check: boolean = false;
       for ( let i = 0 ; i < Object.keys(this.user).length ; i++) {
-          if ($('#email').val() === this.user[i].EMAIL && $('#password').val() === this.user[i].PASSWORD){
+          if ($('#email').val() === this.user[i].email && $('#password').val() === this.user[i].password){
             check = true;
+            this.loggedUser = this.user[i];
           }
       }
       if(!check){
@@ -41,6 +44,12 @@ export class SignInPageComponent implements OnInit, AfterViewInit {
         if( retVal == true ){
           this.userservice
             .loggedIn(true);
+          console.log(this.loggedUser);
+          let navigationExtras: NavigationExtras = {
+            queryParams: {
+              "user": this.loggedUser.email
+            }
+          };
           this.router.navigate(['/home']);
         }else{
           return false;

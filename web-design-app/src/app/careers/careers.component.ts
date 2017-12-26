@@ -2,6 +2,8 @@ import { Component, OnInit , AfterViewInit} from '@angular/core';
 import { UserService } from '../user/user-service';
 import {NgbModal, NgbActiveModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import * as $ from 'jquery';
+import {Router, NavigationExtras} from '@angular/router';
+
 
 @Component({
   selector: 'app-careers',
@@ -13,7 +15,7 @@ export class CareersComponent implements OnInit, AfterViewInit {
   fileUpload: any;
   loaded: boolean = false;
 
-  constructor(private userService: UserService, public modalService: NgbModal) {
+  constructor(private userService: UserService, public modalService: NgbModal,  private router: Router) {
   }
 
   ngOnInit() {
@@ -101,7 +103,7 @@ export class CareersComponent implements OnInit, AfterViewInit {
       return false;
     } else {
       this.userService
-        .careerRequest($('#name').val(), $("#email").val(), $('#phone').val(), $('#msg').val())
+        .careerRequest($('#name').val(), $('#email').val(), $('#phone').val(), $('#msg').val())
         .subscribe();
       this.modalService.open(content);
       $('#name').val('');
@@ -120,5 +122,11 @@ export class CareersComponent implements OnInit, AfterViewInit {
       return `with: ${reason}`;
     }
 
+  }
+
+  onClick(content){
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
   }
 }

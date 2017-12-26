@@ -17,6 +17,7 @@ import * as $ from 'jquery';
 export class RestaurantsComponent implements OnInit {
   restaurants: Restaurants;
   resData:Restaurants;
+  emailUser:any;
   constructor(private sanitizer: DomSanitizer, private router: Router, private userService: UserService, private route: ActivatedRoute, public modalService: NgbModal) { }
 
   cityName: any;
@@ -25,7 +26,9 @@ export class RestaurantsComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.cityName = params["cityName"];
+      this.emailUser = params["user"];
     });
+    console.log(this.emailUser);
     this.userService
       .selectData(this.cityName)
       .subscribe(restaurants => {
@@ -34,7 +37,9 @@ export class RestaurantsComponent implements OnInit {
   }
 
   onClick(){
-    console.log(this.restaurants);
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
   }
 
   cleanURL(oldURL)  {

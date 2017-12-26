@@ -37,6 +37,12 @@ export class ShoppingComponent implements OnInit {
     return (this.sanitizer.bypassSecurityTrustResourceUrl(oldURL));
   }
 
+  onClick(){
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
+  }
+
   modalopen(content,r:Shopping){
     this.resData=r;
     console.log(this.resData);

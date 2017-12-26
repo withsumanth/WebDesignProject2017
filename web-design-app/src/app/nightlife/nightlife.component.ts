@@ -35,6 +35,13 @@ export class NightlifeComponent implements OnInit {
     return (this.sanitizer.bypassSecurityTrustResourceUrl(oldURL));
   }
 
+  onClick(){
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
+  }
+
+
   modalopen(content,r:Nightlife){
     this.resData=r;
     console.log(this.resData);

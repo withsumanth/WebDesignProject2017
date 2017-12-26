@@ -33,23 +33,23 @@
   </div>
 </ng-template>
 
-<nav class="navbar navbar-inverse"  data-offset-top="197">
+<nav class="navbar navbar-inverse"  style="height: 130px">
   <div class="container-fluid">
-    <div class="navbar-header">
-
-      <a class="navbar-brand" href="#">What's in my City?</a>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <form class="form-inline">
-
-          <div class="form-group button_grop" style="float: right">
-            <button type="submit" class="btn btn-primary "id="login">Login</button>
 
 
-          </div>
-        </form>
-      </div>
+    <a [routerLink]="['/home']" class="navbar-brand"><img src="../../assets/images/notanymore.png" height="100" style="margin-right: 1413px"/></a>
+
+
+      <div class="" id="myNavbar">
+
+
+
+            <button type="submit" class="btn btn-primary" id="login" style="float: right" (click) ="onClick()" >Logout</button>
+
+
+
+
+
     </div>
   </div>
 </nav>

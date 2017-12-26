@@ -38,26 +38,26 @@
     <div class="">
       <div *ngIf="! isUserLoggedIn" class="heading">
         <h1> &nbsp; </h1>
-        <a class="headingref" href="#" style="margin-left: 15px">Write a Review</a>
+        <a class="headingref"(click)="writerev(content)"style="margin-left: 15px">Write a Review</a>
         <a class="headingrefForMob">What's in my City?</a>
 
         <!--<img class="logo" src="../../assets/images/logo.png" alt="Logo" width="200px">-->
 
+        <!--<div *ngIf="isUserLoggedIn">
         <span class="dropdown" style="float: right">
-        <a [routerLink]=""><button class="dropbtn1 headingref1">My Account</button></a>
-
+        <a (click)="logoutClicked($event)"><button class="dropbtn1 headingref1">My Account</button></a>
           <span class="dropdown-content">
-            <a href="#">Change my password</a>
-            <a href="#">Logout</a>
+            <a>Logout</a>
           </span>
 
         </span>
+        </div>-->
         <a [routerLink]="['/loginuser']"><button type="button" class="btn" style="align:right">Login</button></a>
         <a [routerLink]="['/createuser']"><button type="button" class="btn">Sign Up</button></a>
       </div>
         <div *ngIf="isUserLoggedIn" class="heading">
           <h1> &nbsp; </h1>
-          <a class="headingref" href="#">Write a Review</a>
+          <a class="headingref"(click)="writerev(content)">Write a Review</a>
           <a class="headingrefForMob">What's in my City?</a>
           <a (click)="logoutClicked($event)"><button type="button" class="btn" style="align:right">Logout</button></a>
         </div>
@@ -90,7 +90,6 @@
                       <option value="Events" id ="category2">
                       <option value="Nightlife" id ="category3">
                       <option value="Places of Interest" id ="category4">
-                      <option value="E-Learning" id ="category5">
                     </datalist>
                   </div>
                   <div class="form-group" id="cities">
@@ -128,7 +127,7 @@
                       <a class="nav-link" (click)="placint(content)"><img src="assets/images/library.png" /><p class="categorySearch"> &nbsp; Places of interest </p> &nbsp; </a>
                     </li>
                     <li class="nav-item" id="liId5">
-                      <a class="nav-link" href="#"><img src="assets/images/learning.png" /><p class="categorySearch"> &nbsp; E-Learning </p> &nbsp; </a>
+                      <a class="nav-link"(click)="elear(content)"><img src="assets/images/learning.png" /><p class="categorySearch"> &nbsp; E-Learning </p> &nbsp; </a>
                     </li>
                   </ul>
                 </div>
@@ -222,37 +221,37 @@
           </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/bangalore']"><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236"></a>
+                <a ><img src="../../assets/images/bangvector.png" class="circle" alt="bengaluru" width="304" height="236" (click)="bagBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/hyderabad']"><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236"></a>
+                <a ><img src="../../assets/images/hyderabad-india-charminar-vector-drawn-sketch-illustration-hand-64018001.jpg" class="circle" alt="hyderabad" width="304" height="236" (click)="hydBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/mumbai']"><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236"></a>
+                <a ><img src="../../assets/images/mumbaibw.png" class="circle" alt="mumbai" width="304" height="236" (click)="mumBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/nagpur']"><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236"></a>
+                <a ><img src="../../assets/images/nagpur.jpg" class="circle" alt="nagpur" width="304" height="236" (click)="nagBtn(content)"></a>
               </div>
 
              <div class="whiteBorder"></div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/boston']"><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236"></a>
+                <a ><img src="../../assets/images/boston_cityscape_wall_decal_design_by_wall_decal_shop-d6808v0.jpg" class="circle" alt="boston" width="304" height="236" (click)="bosBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/losangeles']"><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236"></a>
+                <a ><img src="../../assets/images/stock-vector-los-angeles-lettering-modern-text-and-skyline-city-vector-los-angeles-print-hand-drawn-font-for-604803965-2.jpg" class="circle" alt="losangeles" width="304" height="236" (click)="losBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/lasvegas']"><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236"></a>
+                <a ><img src="../../assets/images/laslaslas.jpg" class="circle" alt="lasvegas" width="304" height="236" (click)="lasBtn(content)"></a>
               </div>
 
               <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                <a [routerLink]="['/newyork']"><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236"></a>
+                <a ><img src="../../assets/images/new-york-skyline-and-red-ribbon_23-2147493929_Fotor.jpg" class="circle" alt="nyc" width="304" height="236" (click)="nycBtn(content)"></a>
               </div>
 
 
@@ -313,8 +312,8 @@
 
 
             <br>
-            <p style="color:#ffffff;margin-left: 15px"><i>What's in my city? &copy;</i><a href="">About Us | </a><a href="">Contact Us | </a><a href="">Disclaimer | </a>
-            <a class="headingrefForReview" href="#"> Write a Review</a></p>
+            <p style="color:#ffffff;margin-left: 15px"><i>What's in my city? &copy;</i><a (click)="abtUs(content)" >About Us | </a><a (click)="cntct(content)" >Contact Us | </a><a (click)="disc(content)" >Disclaimer | </a>
+            <a class="headingrefForReview"> Write a Review</a></p>
 
           </div>
         </div>

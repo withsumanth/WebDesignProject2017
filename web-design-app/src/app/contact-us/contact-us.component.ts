@@ -98,4 +98,10 @@ export class ContactUsComponent implements OnInit, AfterViewInit {
   jobBtn(){
     this.router.navigate(['/career']);
   }
+
+  onClick(){
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
+  }
 }

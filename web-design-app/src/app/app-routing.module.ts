@@ -21,6 +21,9 @@ import { LosAngelesIndividualPageComponent } from './los-angeles-individual-page
 import { NycindividualPageComponent } from './nycindividual-page/nycindividual-page.component';
 import { WriteAreviewComponent } from './write-areview/write-areview.component';
 import { AboutBangaloreComponent } from './about-bangalore/about-bangalore.component';
+import { ElearningComponent } from './elearning/elearning.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+
 
 const routes: Routes = [
   {path: 'home', component: IndexComponent},
@@ -30,7 +33,7 @@ const routes: Routes = [
   {path: 'restaurants', component: RestaurantsComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contact-us', component: ContactUsComponent},
-  {path: 'disclaimer', component: AboutUsComponent},
+  {path: 'disclaimer', component: DisclaimerComponent},
   {path: 'events', component: EventsComponent},
   {path: 'placesofint', component: PlacesofintComponent},
   {path: 'ntlife', component: NightlifeComponent},
@@ -44,6 +47,8 @@ const routes: Routes = [
   {path: 'losangeles', component: LosAngelesIndividualPageComponent},
   {path: 'newyork', component: NycindividualPageComponent},
   {path: 'bangalore', component: AboutBangaloreComponent},
+  {path: 'writereview', component: WriteAreviewComponent},
+  {path: 'elearning', component: ElearningComponent},
 ];
 
 

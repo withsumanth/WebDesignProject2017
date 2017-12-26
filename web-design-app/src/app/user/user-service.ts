@@ -15,6 +15,7 @@ export class UserService {
     this.options = new RequestOptions({ headers: this.headers });
   }
   onSignup(details) {
+    console.log(details);
     this.checkLogout = false;
     return this._http.post('http://localhost/ProjectPhp/insert.php/', details, this.options)
       .map(() => '');
@@ -66,4 +67,19 @@ export class UserService {
     return this._http.post('http://localhost/ProjectPhp/career.php/', {'name':name,'email':email,'phone':phone,'msg':msg} , this.options)
       .map(() => '');
   }
+
+  getSelectedUsers(values){
+    console.log(values);
+    return this._http.post('http://localhost/ProjectPhp/insertwithdata.php/', {'mail': values} , this.options)
+      .map( res => res.json());
+  }
+
+  updateReview(values,rating) {
+    console.log(values);
+    console.log(rating);
+    return this._http.post('http://localhost/ProjectPhp/updatereview.php/',{'rev': values,'rat':rating} , this.options)
+      .map(() => '');
+  }
+
+
 }

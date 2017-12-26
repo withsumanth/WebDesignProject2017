@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, NavigationExtras} from '@angular/router';
+import { UserService } from '../user/user-service';
+
 
 @Component({
   selector: 'app-hyderabad-individual-page',
@@ -8,7 +10,7 @@ import {Router, NavigationExtras} from '@angular/router';
 })
 export class HyderabadIndividualPageComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -57,4 +59,11 @@ export class HyderabadIndividualPageComponent implements OnInit {
     };
     this.router.navigate(['/restaurants'], navigationExtras);
   }
+  onClick(){
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
+
+  }
+
 }

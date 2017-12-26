@@ -12,17 +12,17 @@ import * as $ from 'jquery';
     styleUrls: ['./create-user-page.component.css']
 })
 export class CreateUserPageComponent implements OnInit, AfterViewInit {
-    user: User;
+    public user: User;
     constructor(private userService: UserService, private router: Router) {
         userService
             .getUsers()
             .subscribe(user => {
                 this.user = user;
             });
+
     }
 
     ngOnInit() {
-
     }
 
     ngAfterViewInit() {
@@ -59,7 +59,7 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
         }
         let check: boolean = false;
         for (let i = 0; i < Object.keys(this.user).length; i++) {
-            if ($('#email').val() === this.user[i].EMAIL) {
+            if ($('#email').val() === this.user[i].email) {
                 check = true;
             }
         }
@@ -96,7 +96,7 @@ export class CreateUserPageComponent implements OnInit, AfterViewInit {
         } else {
             let check: boolean = false;
             for (let i = 0; i < Object.keys(this.user).length; i++) {
-                if ($('#email').val() === this.user[i].EMAIL) {
+                if ($('#email').val() === this.user[i].email) {
                     check = true;
                 }
             }

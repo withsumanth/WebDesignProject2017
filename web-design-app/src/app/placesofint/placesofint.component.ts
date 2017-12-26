@@ -53,6 +53,12 @@ export class PlacesofintComponent implements OnInit {
     });
   }
 
+  onClick(){
+    this.userService
+      .loggedIn(false);
+    this.router.navigate(['/home']);
+  }
+
 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
