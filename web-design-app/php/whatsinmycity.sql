@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 16, 2017 at 10:22 AM
+-- Generation Time: Dec 26, 2017 at 04:52 AM
 -- Server version: 5.7.19
 -- PHP Version: 5.6.31
 
@@ -365,7 +365,7 @@ INSERT INTO `shopping` (`ID`, `Name`, `Address`, `City`, `Rating`, `FromTime`, `
 (14, 'Meeras Design Studio', 'Plot No. 27, Nagarjuna Hills Road, Nagarjuna Hills, Punjagutta, Hyderabad, Telangana 500082', 'Hyderabad', 4, '11:00 am', '9:00 pm', '$$', '$$$$', 'assets/images/meera.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.675785164573!2d78.44862931376801!3d17.427340106241235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90cac1cf65d5%3A0xdb55346a9347fb73!2sMeeras+Design+Studio!5e0!3m2!1sen!2sus!4v1513294796670', 'Ethnic wear', '+91 40 6686 0600'),
 (15, 'Elahe', '476, Elahe Milestone, Road No.10, Banjara Hills, Hyderabad, Telangana 500034', 'Hyderabad', 4, '10:00 am', '11:00 pm', '$$', '$$$$', 'assets/images/elahe.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.9130670768127!2d78.44157531376784!3d17.415959106567108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb972effffffff%3A0xb9b2b753377f8f91!2sElahe!5e0!3m2!1sen!2sus!4v1513294835944', 'Casual wear', '+91 40 2335 0130'),
 (16, 'Basics Life', '#3-6-111 shop No 14,15,16, Blue Chip Arcade Opp Tata Motor’s Showroom, Hyderabad, Telangana 500029', 'Hyderabad', 2.5, '8:00 am', '9:00 pm', '$$', '$$$', 'assets/images/basic.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.9077425938603!2d78.52864711376705!3d17.368171807933102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb98f1c0ace70f%3A0xa4a70d8d17bb90bf!2sBasics+Life.+Hyderabad%2C+Dilsukhnagar!5e0!3m2!1sen!2sus!4v1513294889402', 'Men\'s wear', '+91 40 3290 0605'),
-(17, 'Neeru\'s', 'Road Number 36, Opp LivLife Hospital, Jubilee Hills, Hyderabad, 500033', 'Hyderabad', 3, '11:00 am', '9:00 pm', '$$', '$$$$', 'assets/images/neeru.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4371969249337!2d78.3976398137682!3d17.438776505913598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9137d66da1d7%3A0x5d3b4f91f19613f4!2sNeeru&#39;s+Emporio!5e0!3m2!1sen!2sus!4v1513294925982', 'Ethnic wear', '+91 40 6522 0000'),
+(17, 'Neeru', 'Road Number 36, Opp LivLife Hospital, Jubilee Hills, Hyderabad, 500033', 'Hyderabad', 3, '11:00 am', '9:00 pm', '$$', '$$$$', 'assets/images/neeru.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4371969249337!2d78.3976398137682!3d17.438776505913598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9137d66da1d7%3A0x5d3b4f91f19613f4!2sNeeru&#39;s+Emporio!5e0!3m2!1sen!2sus!4v1513294925982', 'Ethnic wear', '+91 40 6522 0000'),
 (18, 'Anahita ', 'H.No. 8-2-418, Ground Floor, Krishnama House, Road No. 7, Near Meridian School, Next to Ratandeep, Banjara Hills, Hyderabad, Telangana 500034', 'Hyderabad', 4, '10:00 am', '11:00 pm', '$', '$$$', 'assets/images/anahita.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.831904419363!2d78.4389652137679!3d17.419852806455587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973200e41ab9%3A0x3308fd86603b4555!2sAnahita!5e0!3m2!1sen!2sus!4v1513294997077', 'Casual wear', '+91 99632 84563'),
 (19, 'Free People', '1520 Cahuenga Blvd, Los Angeles, CA 90028', 'Los Angeles', 3, '11:00 am', '9:00 pm', '$', '$$$', 'assets/images/free.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105754.87857390671!2d-118.48018347360042!3d34.073616729751855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf3a19444225%3A0x611cf98b43b8f28d!2sFree+People!5e0!3m2!1sen!2sus!4v1513295321688', 'Casual wear', '(323) 465-1861'),
 (20, 'JC Penny', '9301 Tampa Ave, Northridge, CA 91324', 'Los Angeles', 4, '10:00 am', '9:00 pm', '$$', '$$$', 'assets/images/jcpenny.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3298.3950683851813!2d-118.55869368580294!3d34.238461415343195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c29b0cbc465ad5%3A0xd177ad9acf5e6846!2sJCPenney!5e0!3m2!1sen!2sus!4v1513295369205', 'Casual wear', '(818) 885-1464'),
@@ -397,6 +397,32 @@ INSERT INTO `shopping` (`ID`, `Name`, `Address`, `City`, `Rating`, `FromTime`, `
 (46, 'Meg', '358 Atlantic Ave, Brooklyn, NY 11217', 'New York', 3, '11:00 am', '9:30 pm', '$', '$$$', 'assets/images/meg.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9369368901384!2d-73.96423558556062!3d40.71940474510121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2596704f6493b%3A0x3daef08010a098a3!2smeg!5e0!3m2!1sen!2sus!4v1513297395726', 'Women\'s wear', '(718) 522-3585'),
 (47, 'Adidas', '115 Spring St, New York, NY 10012', 'New York', 2.5, '11:00 am', '8:30 pm', '$', '$$$', 'assets/images/adidas.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.737675899392!2d-74.00216818556048!3d40.72379094483277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598e7cce1693%3A0x3ad442d15ea8e4b1!2sAdidas!5e0!3m2!1sen!2sus!4v1513297430600', 'Sports wear', '(212) 966-0954'),
 (48, 'Massimo Dutti', '689 5th Ave, New York, NY 10022', 'New York', 4, '10:00 am', '10:30 pm', '$$', '$$$$', 'assets/images/mass.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0419554594955!2d-73.9773039855589!3d40.76110194254888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258fbae03727b%3A0x32ac8477b9274d03!2sMassimo+Dutti!5e0!3m2!1sen!2sus!4v1513297462646', 'Casual wear', '(212) 371-2555');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `name` varchar(25) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `rating` varchar(10) NOT NULL,
+  `review` varchar(255) NOT NULL,
+  `code` varchar(25) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`name`, `email`, `password`, `rating`, `review`, `code`) VALUES
+('ee', 'ee@ee.com', '123', '', '', '123'),
+('', 'aa@aa.com', '123', '', '', '123'),
+('', 'sravya.shalu@gmail.com', '1', '', '', '1'),
+('', 'rishi.nandedkar93@gmail.com', '123', '', '', '123');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
